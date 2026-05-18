@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aastha Reality | Premium Real Estate Brokerage</title>
+    <meta name="description" content="Professional real estate brokerage services by Yash Modi. Specializing in residential houses, lands, showrooms, office spaces, and warehouses.">
+    <meta name="keywords" content="real estate, brokerage, property, residential, commercial, Yash Modi, Aastha Reality">
+    <meta name="author" content="Aastha Reality">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://picsum.photos/64?random=100">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#0A2463',
+                        'cool-grey': '#5E6E82',
+                        'elegant-gold': '#D4AF37',
+                        'light-gold': '#F4E4C1',
+                        'dark-gold': '#B8860B',
+                        'off-white': '#F8F9FA',
+                        'dark-grey': '#2D3748'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-gentle': 'pulseGentle 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        pulseGentle: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.8' }
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px rgba(0, 0, 0, 0.08)',
+                        'gold-glow': '0 0 20px rgba(212, 175, 55, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0A2463 0%, #1E3A8A 100%);
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4E4C1 100%);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+        
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        .gold-border {
+            border: 2px solid #D4AF37;
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .backdrop-blur {
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-dark-grey bg-off-white">
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        <a href="https://wa.me/919681255921" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-float">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="tel:+919681255921" class="bg-deep-blue text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-float" style="animation-delay: 0.5s">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-40 backdrop-blur bg-white/90 shadow-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center">
+                        <span class="text-deep-blue font-serif font-bold text-xl">AR</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-2xl font-bold text-deep-blue">Aastha Reality</h1>
+                        <p class="text-cool-grey text-sm">Trusted Real Estate Brokerage</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">About</a>
+                    <a href="#services" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">Services</a>
+                    <a href="#contact" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">Contact</a>
+                    <a href="#enquiry" class="bg-deep-blue text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all duration-300 hover:shadow-premium">Enquire Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuButton" class="md:hidden text-deep-blue">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+                <a href="#home" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">Home</a>
+                <a href="#about" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">About</a>
+                <a href="#services" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">Services</a>
+                <a href="#contact" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">Contact</a>
+                <a href="#enquiry" class="block bg-deep-blue text-white px-6 py-3 rounded-full text-center hover:bg-opacity-90">Enquire Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-16 pb-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-64 h-64 rounded-full gold-border"></div>
+            <div class="absolute bottom-20 right-10 w-80 h-80 rounded-full gold-border"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center animate-fade-in">
+                <h2 class="font-serif text-5xl md:text-6xl font-bold mb-6 text-shadow animate-slide-up">
+                    Your Trusted Partner in <span class="text-elegant-gold">Real Estate</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-light-gold mb-10 opacity-90 animate-slide-up" style="animation-delay: 0.2s">
+                    Premium brokerage services connecting buyers and sellers with excellence
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style="animation-delay: 0.4s">
+                    <a href="#enquiry" class="bg-elegant-gold text-deep-blue px-8 py-4 rounded-full text-lg font-semibold hover:bg-dark-gold hover:shadow-gold-glow transition-all duration-300 transform hover:scale-105">
+                        Start Your Property Journey
+                    </a>
+                    <a href="#services" class="bg-transparent text-white border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-deep-blue transition-all duration-300">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trust Badges -->
+        <div class="container mx-auto px-4 mt-20">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
+                    <div class="text-4xl font-bold text-elegant-gold mb-2">500+</div>
+                    <div class="text-light-gold">Properties Sold</div>
+                </div>
+                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
+                    <div class="text-4xl font-bold text-elegant-gold mb-2">6+</div>
+                    <div class="text-light-gold">Years Experience</div>
+                </div>
+                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
+                    <div class="text-4xl font-bold text-elegant-gold mb-2">98%</div>
+                    <div class="text-light-gold">Client Satisfaction</div>
+                </div>
+                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
+                    <div class="text-4xl font-bold text-elegant-gold mb-2">24/7</div>
+                    <div class="text-light-gold">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">About Aastha Reality</h2>
+                    <div class="section-divider w-24 mx-auto my-6"></div>
+                    <p class="text-cool-grey text-lg max-w-3xl mx-auto">
+                        Founded by Yash Modi, we bring professionalism, trust, and excellence to every real estate transaction
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="animate-slide-up">
+                        <div class="relative">
+                            <img src="https://picsum.photos/600/500?random=101" alt="Yash Modi - Founder of Aastha Reality" class="rounded-2xl shadow-premium" loading="lazy">
+                            <!-- <div class="absolute -bottom-6 -right-6 bg-elegant-gold text-deep-blue p-6 rounded-2xl shadow-premium">
+                                <div class="text-2xl font-bold">Yash Modi</div>
+                                <div class="text-sm">Founder</div>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6 animate-slide-up" style="animation-delay: 0.2s">
+                        <h3 class="font-serif text-3xl font-bold text-deep-blue">Our Vision</h3>
+                        <p class="text-cool-grey leading-relaxed">
+                            To become the most trusted real estate brokerage firm, known for our integrity, professionalism, and exceptional service in connecting buyers with their dream properties.
+                        </p>
+                        
+                        <h3 class="font-serif text-3xl font-bold text-deep-blue mt-8">Our Mission</h3>
+                        <p class="text-cool-grey leading-relaxed">
+                            We are committed to providing personalized, transparent, and efficient brokerage services that exceed client expectations while maintaining the highest ethical standards in the industry.
+                        </p>
+                        
+                        <div class="pt-6">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-elegant-gold text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-deep-blue">Trust & Integrity</h4>
+                                    <p class="text-cool-grey text-sm">Our foundation is built on honesty and transparency</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center">
+                                    <i class="fas fa-award text-elegant-gold text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-deep-blue">Excellence</h4>
+                                    <p class="text-cool-grey text-sm">Delivering premium service in every transaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-off-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Our Premium Services</h2>
+                <div class="section-divider w-24 mx-auto my-6"></div>
+                <p class="text-cool-grey text-lg max-w-3xl mx-auto">
+                    Comprehensive brokerage services tailored to meet all your real estate needs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Residential Houses</h3>
+                    <p class="text-cool-grey mb-6">
+                        Find your dream home with our curated selection of premium residential properties, from apartments to luxury villas.
+                    </p>
+                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
+                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.1s">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-mountain text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Lands & Plots</h3>
+                    <p class="text-cool-grey mb-6">
+                        Prime land parcels for residential, commercial, or agricultural purposes with clear titles and legal verification.
+                    </p>
+                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
+                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-store text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Showrooms</h3>
+                    <p class="text-cool-grey mb-6">
+                        Premium retail spaces in prime locations with high footfall, perfect for brands and businesses.
+                    </p>
+                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
+                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.3s">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Office Spaces</h3>
+                    <p class="text-cool-grey mb-6">
+                        Modern office spaces in commercial hubs with amenities and infrastructure for growing businesses.
+                    </p>
+                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
+                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.4s">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-warehouse text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Godowns & Warehouses</h3>
+                    <p class="text-cool-grey mb-6">
+                        Industrial storage spaces with logistics connectivity for manufacturing and distribution businesses.
+                    </p>
+                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
+                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.5s">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Consultation Services</h3>
+                    <p class="text-cool-grey mb-6">
+                        Expert advice on property investment, legal documentation, and market trends for informed decisions.
+                    </p>
+                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
+                        Book Consultation <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Why Choose Aastha Reality</h2>
+                <div class="section-divider w-24 mx-auto my-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-2xl bg-off-white hover:shadow-premium transition-all duration-300 animate-slide-up">
+                    <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-tie text-deep-blue text-3xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-deep-blue mb-4">Expert Guidance</h3>
+                    <p class="text-cool-grey">
+                        Personalized attention from experienced professionals who understand your unique requirements
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 rounded-2xl bg-off-white hover:shadow-premium transition-all duration-300 animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-file-contract text-deep-blue text-3xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-deep-blue mb-4">Legal Assurance</h3>
+                    <p class="text-cool-grey">
+                        Complete legal verification and documentation support for worry-free transactions
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 rounded-2xl bg-off-white hover:shadow-premium transition-all duration-300 animate-slide-up" style="animation-delay: 0.4s">
+                    <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hand-holding-usd text-deep-blue text-3xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-deep-blue mb-4">Best Value</h3>
+                    <p class="text-cool-grey">
+                        Negotiating the best deals and ensuring you get maximum value for your investment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
+                <div class="section-divider w-24 mx-auto my-6"></div>
+                <p class="text-light-gold text-lg max-w-3xl mx-auto">
+                    Hear from our satisfied clients who found their dream properties with us
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 animate-slide-up">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/80?random=201" alt="Rajesh Sharma" class="w-16 h-16 rounded-full mr-4" loading="lazy">
+                        <div>
+                            <h4 class="font-bold text-lg">Rajesh Sharma</h4>
+                            <p class="text-light-gold text-sm">Residential Property Buyer</p>
+                        </div>
+                    </div>
+                    <p class="italic text-light-gold">
+                        "Aastha Reality helped me find my dream home within budget. Their professionalism and attention to detail were exceptional."
+                    </p>
+                    <div class="flex text-elegant-gold mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/80?random=202" alt="Priya Patel" class="w-16 h-16 rounded-full mr-4" loading="lazy">
+                        <div>
+                            <h4 class="font-bold text-lg">Priya Patel</h4>
+                            <p class="text-light-gold text-sm">Commercial Property Seller</p>
+                        </div>
+                    </div>
+                    <p class="italic text-light-gold">
+                        "Yash Modi and his team sold my commercial property at the best market price. Their network and negotiation skills are outstanding."
+                    </p>
+                    <div class="flex text-elegant-gold mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/80?random=203" alt="Amit Verma" class="w-16 h-16 rounded-full mr-4" loading="lazy">
+                        <div>
+                            <h4 class="font-bold text-lg">Amit Verma</h4>
+                            <p class="text-light-gold text-sm">Land Investor</p>
+                        </div>
+                    </div>
+                    <p class="italic text-light-gold">
+                        "The legal verification and documentation support provided by Aastha Reality gave me complete peace of mind in my land investment."
+                    </p>
+                    <div class="flex text-elegant-gold mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Frequently Asked Questions</h2>
+                    <div class="section-divider w-24 mx-auto my-6"></div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-deep-blue">What areas do you serve?</h3>
+                            <i class="fas fa-chevron-down text-elegant-gold"></i>
+                        </button>
+                        <div class="faq-answer mt-4 hidden">
+                            <p class="text-cool-grey">
+                                We primarily serve Kolkata and its surrounding regions, with strong expertise across key residential and commercial areas of the city.                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-deep-blue">How do you verify property documents?</h3>
+                            <i class="fas fa-chevron-down text-elegant-gold"></i>
+                        </button>
+                        <div class="faq-answer mt-4 hidden">
+                            <p class="text-cool-grey">
+                                We have a dedicated legal team that verifies all property documents including title deeds, encumbrance certificates, and approvals from relevant authorities before proceeding with any transaction.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-deep-blue">What are your brokerage fees?</h3>
+                            <i class="fas fa-chevron-down text-elegant-gold"></i>
+                        </button>
+                        <div class="faq-answer mt-4 hidden">
+                            <p class="text-cool-grey">
+                                Our fees are competitive and transparent, typically ranging from 1-2% of the property value depending on the service type and property value. We provide a detailed fee structure before starting any engagement.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-deep-blue">How long does the buying process take?</h3>
+                            <i class="fas fa-chevron-down text-elegant-gold"></i>
+                        </button>
+                        <div class="faq-answer mt-4 hidden">
+                            <p class="text-cool-grey">
+                                The timeline varies based on property type and transaction complexity. Typically, residential properties takes 15-20 days, while commercial properties may take 60-90 days including due diligence and documentation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Enquiry Form -->
+    <section id="contact" class="py-20 bg-off-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Get In Touch</h2>
+                    <div class="section-divider w-24 mx-auto my-6"></div>
+                    <p class="text-cool-grey text-lg max-w-3xl mx-auto">
+                        Ready to start your property journey? Contact us for a personalized consultation
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="animate-slide-up">
+                        <div class="bg-white rounded-2xl shadow-premium p-8">
+                            <h3 class="font-serif text-2xl font-bold text-deep-blue mb-8">Contact Information</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-elegant-gold text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-deep-blue mb-1">Office Address</h4>
+                                        <p class="text-cool-grey">Howrah,West Bengal</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-phone text-elegant-gold text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-deep-blue mb-1">Phone Number</h4>
+                                        <p class="text-cool-grey">+91 96812 55921</p>
+                                        <p class="text-cool-grey text-sm">Mon-Sat: 9:00 AM - 7:00 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-envelope text-elegant-gold text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-deep-blue mb-1">Email Address</h4>
+                                        <p class="text-cool-grey">ymodi4805@gmail.com</p>
+                                        <p class="text-cool-grey">aastharealty590@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-10 pt-8 border-t border-cool-grey/20">
+                                <h4 class="font-bold text-deep-blue mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Enquiry Form -->
+                    <div id="enquiry" class="animate-slide-up" style="animation-delay: 0.2s">
+                        <div class="bg-white rounded-2xl shadow-premium p-8">
+                            <h3 class="font-serif text-2xl font-bold text-deep-blue mb-2">Send Enquiry</h3>
+                            <p class="text-cool-grey mb-8">Fill out the form below and we'll get back to you within 24 hours</p>
+                            
+                            <form id="enquiryForm" class="space-y-6">
+                                <div>
+                                    <label for="fullName" class="block text-deep-blue font-medium mb-2">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required 
+                                           class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300"
+                                           placeholder="Enter your full name">
+                                    <div class="text-red-500 text-sm mt-1 hidden" id="nameError"></div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="email" class="block text-deep-blue font-medium mb-2">Email Address *</label>
+                                        <input type="email" id="email" name="email" required 
+                                               class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300"
+                                               placeholder="your@email.com">
+                                        <div class="text-red-500 text-sm mt-1 hidden" id="emailError"></div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="phone" class="block text-deep-blue font-medium mb-2">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" required 
+                                               class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300"
+                                               placeholder="+91 98765 43210">
+                                        <div class="text-red-500 text-sm mt-1 hidden" id="phoneError"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="service" class="block text-deep-blue font-medium mb-2">Service Required *</label>
+                                    <select id="service" name="service" required 
+                                            class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300 appearance-none bg-white">
+                                        <option value="">Select a service</option>
+                                        <option value="residential">Residential Houses</option>
+                                        <option value="land">Lands & Plots</option>
+                                        <option value="showroom">Showrooms</option>
+                                        <option value="office">Office Spaces</option>
+                                        <option value="warehouse">Godowns & Warehouses</option>
+                                        <option value="consultation">Consultation Services</option>
+                                    </select>
+                                    <div class="text-red-500 text-sm mt-1 hidden" id="serviceError"></div>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-deep-blue font-medium mb-2">Message (Optional)</label>
+                                    <textarea id="message" name="message" rows="4"
+                                              class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300 resize-none"
+                                              placeholder="Tell us about your requirements..."></textarea>
+                                </div>
+                                
+                                <div class="pt-4">
+                                    <button type="submit" 
+                                            class="w-full bg-deep-blue text-white py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:shadow-premium flex items-center justify-center">
+                                        <span id="submitText">Submit Enquiry</span>
+                                        <i class="fas fa-paper-plane ml-2"></i>
+                                    </button>
+                                </div>
+                                
+                                <div id="successMessage" class="hidden p-4 bg-green-50 text-green-700 rounded-lg border border-green-200">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <span>Thank you! Your enquiry has been submitted successfully. We'll contact you soon.</span>
+                                </div>
+                                
+                                <div id="errorMessage" class="hidden p-4 bg-red-50 text-red-700 rounded-lg border border-red-200">
+                                    <i class="fas fa-exclamation-circle mr-2"></i>
+                                    <span>There was an error submitting your enquiry. Please try again.</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center">
+                            <span class="text-deep-blue font-serif font-bold">AR</span>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold">Aastha Reality</h3>
+                            <p class="text-light-gold text-sm">Trusted Real Estate Brokerage</p>
+                        </div>
+                    </div>
+                    <p class="text-cool-grey text-sm">
+                        Professional brokerage services connecting buyers and sellers with trust, integrity, and excellence since 2008.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">About Us</a></li>
+                        <li><a href="#services" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Services</a></li>
+                        <li><a href="#contact" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Residential Houses</a></li>
+                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Lands & Plots</a></li>
+                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Showrooms</a></li>
+                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Office Spaces</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-6">Business Hours</h4>
+                    <ul class="space-y-3 text-cool-grey text-sm">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>9:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday</span>
+                            <span>10:00 AM - 5:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>Emergency Only</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-cool-grey/30">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-cool-grey text-sm mb-4 md:mb-0">
+                        &copy; 2024 Aastha Reality. All rights reserved. | Owned by Yash Modi
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300 text-sm">Privacy Policy</a>
+                        <a href="#" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300 text-sm">Terms of Service</a>
+                        <a href="#" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300 text-sm">Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Backend Simulation Script -->
+    <script>
+        // Define data at the beginning
+        const services = [
+            { "id": 1, "value": "residential", "label": "Residential Houses" },
+            { "id": 2, "value": "land", "label": "Lands & Plots" },
+            { "id": 3, "value": "showroom", "label": "Showrooms" },
+            { "id": 4, "value": "office", "label": "Office Spaces" },
+            { "id": 5, "value": "warehouse", "label": "Godowns & Warehouses" },
+            { "id": 6, "value": "consultation", "label": "Consultation Services" }
+        ];
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+            this.innerHTML = mobileMenu.classList.contains('hidden') ? 
+                '<i class="fas fa-bars text-2xl"></i>' : 
+                '<i class="fas fa-times text-2xl"></i>';
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    const mobileMenuButton = document.getElementById('mobileMenuButton');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle current answer
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+                
+                // Close other open FAQs
+                document.querySelectorAll('.faq-question').forEach(otherButton => {
+                    if (otherButton !== this) {
+                        const otherAnswer = otherButton.nextElementSibling;
+                        const otherIcon = otherButton.querySelector('i');
+                        otherAnswer.classList.add('hidden');
+                        otherIcon.classList.remove('fa-chevron-up');
+                        otherIcon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+        });
+
+        // Form validation and submission
+        const enquiryForm = document.getElementById('enquiryForm');
+        const submitButton = enquiryForm.querySelector('button[type="submit"]');
+        const submitText = document.getElementById('submitText');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Helper function to show error
+        function showError(fieldId, message) {
+            const errorElement = document.getElementById(fieldId + 'Error');
+            errorElement.textContent = message;
+            errorElement.classList.remove('hidden');
+            document.getElementById(fieldId).classList.add('border-red-500');
+        }
+
+        // Helper function to clear error
+        function clearError(fieldId) {
+            const errorElement = document.getElementById(fieldId + 'Error');
+            errorElement.classList.add('hidden');
+            document.getElementById(fieldId).classList.remove('border-red-500');
+        }
+
+        // Validation functions
+        function validateName() {
+            const name = document.getElementById('fullName').value.trim();
+            if (!name) {
+                showError('name', 'Full name is required');
+                return false;
+            }
+            if (name.length < 2) {
+                showError('name', 'Name must be at least 2 characters');
+                return false;
+            }
+            clearError('name');
+            return true;
+        }
+
+        function validateEmail() {
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!email) {
+                showError('email', 'Email is required');
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                showError('email', 'Please enter a valid email address');
+                return false;
+            }
+            clearError('email');
+            return true;
+        }
+
+        function validatePhone() {
+            const phone = document.getElementById('phone').value.trim();
+            const phoneRegex = /^[\d\s\+\-\(\)]{10,}$/;
+            
+            if (!phone) {
+                showError('phone', 'Phone number is required');
+                return false;
+            }
+            if (!phoneRegex.test(phone)) {
+                showError('phone', 'Please enter a valid phone number');
+                return false;
+            }
+            clearError('phone');
+            return true;
+        }
+
+        function validateService() {
+            const service = document.getElementById('service').value;
+            if (!service) {
+                showError('service', 'Please select a service');
+                return false;
+            }
+            clearError('service');
+            return true;
+        }
+
+        // Real-time validation
+        document.getElementById('fullName').addEventListener('blur', validateName);
+        document.getElementById('email').addEventListener('blur', validateEmail);
+        document.getElementById('phone').addEventListener('blur', validatePhone);
+        document.getElementById('service').addEventListener('change', validateService);
+
+        // Form submission
+        enquiryForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Validate all fields
+            const isNameValid = validateName();
+            const isEmailValid = validateEmail();
+            const isPhoneValid = validatePhone();
+            const isServiceValid = validateService();
+            
+            if (!isNameValid || !isEmailValid || !isPhoneValid || !isServiceValid) {
+                return;
+            }
+            
+            // Get form data
+            const formData = {
+                fullName: document.getElementById('fullName').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value.trim(),
+                timestamp: new Date().toISOString()
+            };
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitText.textContent = 'Submitting...';
+            
+            try {
+                // Simulate API call to backend
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // In a real application, this would be:
+                // const response = await fetch('/api/enquiries', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify(formData)
+                // });
+                
+                // Simulate successful submission
+                console.log('Enquiry submitted:', formData);
+                
+                // Show success message
+                successMessage.classList.remove('hidden');
+                errorMessage.classList.add('hidden');
+                
+                // Reset form
+                enquiryForm.reset();
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+            } catch (error) {
+                console.error('Error submitting enquiry:', error);
+                errorMessage.classList.remove('hidden');
+                successMessage.classList.add('hidden');
+            } finally {
+                // Reset button state
+                submitButton.disabled = false;
+                submitText.textContent = 'Submit Enquiry';
+                
+                // Hide messages after 5 seconds
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                    errorMessage.classList.add('hidden');
+                }, 5000);
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize with some animations
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.animate-fade-in').forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
