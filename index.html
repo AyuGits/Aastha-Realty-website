@@ -632,7 +632,12 @@
                             <h3 class="font-serif text-2xl font-bold text-deep-blue mb-2">Send Enquiry</h3>
                             <p class="text-cool-grey mb-8">Fill out the form below and we'll get back to you within 24 hours</p>
                             
-                            <form id="enquiryForm" class="space-y-6">
+                            <form
+    id="enquiryForm"
+    class="space-y-6"
+    method="POST"
+    action="https://script.google.com/macros/s/AKfycbxZcIfiV86XaDm2YMEfNtKI1KGbSEi6LhkxHh-X-k4M0lOVMTuQAcX96jkABVyDBLAUcQ/exec"
+    target="hidden_iframe">
                                 <div>
                                     <label for="fullName" class="block text-deep-blue font-medium mb-2">Full Name *</label>
                                     <input type="text" id="fullName" name="fullName" required 
@@ -778,6 +783,11 @@
             </div>
         </div>
     </footer>
+    <iframe
+    name="hidden_iframe"
+    style="display:none;"
+    id="hidden_iframe">
+</iframe>
 
     <script src = "script.js"></script> 
 </body>

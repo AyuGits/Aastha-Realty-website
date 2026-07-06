@@ -248,7 +248,7 @@ document
 // FORM SUBMISSION
 // ===============================
 
-enquiryForm.addEventListener("submit", async function (e) {
+enquiryForm.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
@@ -260,92 +260,24 @@ enquiryForm.addEventListener("submit", async function (e) {
 
     if (!valid) return;
 
-    const formData = {
-
-        fullName: document.getElementById("fullName").value.trim(),
-
-        email: document.getElementById("email").value.trim(),
-
-        phone: document.getElementById("phone").value.trim(),
-
-        service: document.getElementById("service").value,
-
-        message: document.getElementById("message").value.trim()
-
-    };
-
     submitButton.disabled = true;
-
     submitText.innerText = "Submitting...";
 
-    try {
+    enquiryForm.submit();
 
-        const response = await fetch("http://localhost:5000/api/enquiry", {
+    successMessage.classList.remove("hidden");
+    errorMessage.classList.add("hidden");
 
-            method: "POST",
+    enquiryForm.reset();
 
-            headers: {
+    submitButton.disabled = false;
+    submitText.innerText = "Submit Enquiry";
 
-                "Content-Type": "application/json"
-
-            },
-
-            body: JSON.stringify(formData)
-
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-
-            successMessage.classList.remove("hidden");
-
-            errorMessage.classList.add("hidden");
-
-            enquiryForm.reset();
-
-            successMessage.scrollIntoView({
-
-                behavior: "smooth",
-
-                block: "nearest"
-
-            });
-
-        } else {
-
-            successMessage.classList.add("hidden");
-
-            errorMessage.classList.remove("hidden");
-
-        }
-
-    } catch (err) {
-
-        console.error(err);
-
+    setTimeout(() => {
         successMessage.classList.add("hidden");
-
-        errorMessage.classList.remove("hidden");
-
-    } finally {
-
-        submitButton.disabled = false;
-
-        submitText.innerText = "Submit Enquiry";
-
-        setTimeout(() => {
-
-            successMessage.classList.add("hidden");
-
-            errorMessage.classList.add("hidden");
-
-        }, 5000);
-
-    }
+    }, 5000);
 
 });
-
 
 // ===============================
 // SCROLL ANIMATIONS
