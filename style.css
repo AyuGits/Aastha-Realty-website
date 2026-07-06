@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+header {
+  background: #0a2540;
+  color: gold;
+  text-align: center;
+  padding: 20px;
+}
+
+header span {
+  color: #ccc;
+}
+
+.hero {
+  background: linear-gradient(to right, #0a2540, #4a4a4a);
+  color: white;
+  padding: 60px;
+  text-align: center;
+}
+
+.services {
+  padding: 40px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border: 2px solid gold;
+  padding: 20px;
+  margin: 10px;
+  width: 150px;
+  font-weight: bold;
+}
+
+.contact {
+  background: #eaeaea;
+  padding: 40px;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  background: gold;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
