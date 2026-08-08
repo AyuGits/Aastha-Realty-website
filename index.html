@@ -4,25 +4,20 @@
     <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aastha Reality | Premium Real Estate Brokerage</title>
-    <meta name="description" content="Professional real estate brokerage services by Yash Modi. Specializing in residential houses, lands, showrooms, office spaces, and warehouses.">
-    <meta name="keywords" content="real estate, brokerage, property, residential, commercial, Yash Modi, Aastha Reality">
-    <meta name="author" content="Aastha Reality">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://picsum.photos/64?random=100">
-    
-    <!-- Tailwind CSS -->
+
+    <title>Aastha Realty | Trusted Real Estate Brokerage</title>
+    <meta name="description" content="Aastha Realty provides professional real estate brokerage services for residential, land, showroom, office and warehouse properties.">
+    <meta name="keywords" content="Aastha Realty, real estate, property, Howrah, Kolkata, residential, commercial, land, showroom, office, warehouse">
+    <meta name="author" content="Aastha Realty">
+
+    <link rel="icon" type="image/png" href="logo.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -37,382 +32,858 @@
                         'dark-grey': '#2D3748'
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif']
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-in-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                        'pulse-gentle': 'pulseGentle 2s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' }
-                        },
-                        pulseGentle: {
-                            '0%, 100%': { opacity: '1' },
-                            '50%': { opacity: '0.8' }
-                        }
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
                     },
                     boxShadow: {
-                        'premium': '0 20px 40px rgba(0, 0, 0, 0.08)',
-                        'gold-glow': '0 0 20px rgba(212, 175, 55, 0.3)'
+                        premium: '0 20px 45px rgba(10,36,99,.10)',
+                        'gold-glow': '0 0 24px rgba(212,175,55,.28)'
                     }
                 }
             }
-        }
+        };
     </script>
-    
+
     <style>
-        html {
-            scroll-behavior: smooth;
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+        .gradient-bg { background: linear-gradient(135deg,#0A2463 0%,#173B86 55%,#0A2463 100%); }
+        .gold-gradient { background: linear-gradient(135deg,#D4AF37 0%,#F4E4C1 100%); }
+        .section-divider { height:1px; background:linear-gradient(90deg,transparent,#D4AF37,transparent); }
+        .glass { background:rgba(255,255,255,.10); backdrop-filter:blur(12px); }
+        .card-hover { transition:transform .3s ease, box-shadow .3s ease; }
+        .card-hover:hover { transform:translateY(-7px); box-shadow:0 24px 50px rgba(10,36,99,.12); }
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+                linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+            background-size:52px 52px;
         }
-        
-        body {
-            overflow-x: hidden;
+        .building {
+            clip-path:polygon(8% 100%,8% 36%,22% 36%,22% 18%,39% 18%,39% 45%,55% 45%,55% 7%,72% 7%,72% 31%,91% 31%,91% 100%);
         }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #0A2463 0%, #1E3A8A 100%);
+        .line-clamp-3 {
+            display:-webkit-box;
+            -webkit-line-clamp:3;
+            -webkit-box-orient:vertical;
+            overflow:hidden;
         }
-        
-        .gold-gradient {
-            background: linear-gradient(135deg, #D4AF37 0%, #F4E4C1 100%);
+        .fade-up { animation:fadeUp .7s ease both; }
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(18px); }
+            to { opacity:1; transform:translateY(0); }
         }
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        .spinner {
+            width:22px;height:22px;border:3px solid rgba(10,36,99,.15);
+            border-top-color:#D4AF37;border-radius:50%;animation:spin .7s linear infinite;
         }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-        }
-        
-        .form-input:focus {
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
-        }
-        
-        .gold-border {
-            border: 2px solid #D4AF37;
-        }
-        
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .backdrop-blur {
-            backdrop-filter: blur(10px);
-        }
+        @keyframes spin { to { transform:rotate(360deg); } }
     </style>
 </head>
+
 <body class="font-sans text-dark-grey bg-off-white">
-    <!-- Floating Action Buttons -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-        <a href="https://wa.me/919681255921" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-float">
+
+    <!-- Floating Actions -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/919681255921" target="_blank" rel="noopener"
+           class="w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+           aria-label="WhatsApp Aastha Realty">
             <i class="fab fa-whatsapp text-2xl"></i>
         </a>
-        <a href="tel:+919681255921" class="bg-deep-blue text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-float" style="animation-delay: 0.5s">
+        <a href="tel:+919681255921"
+           class="w-14 h-14 rounded-full bg-deep-blue text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+           aria-label="Call Aastha Realty">
             <i class="fas fa-phone text-xl"></i>
         </a>
     </div>
 
-    <!-- Navigation -->
-    <header class="sticky top-0 z-40 backdrop-blur bg-white/90 shadow-sm">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center">
-                        <span class="text-deep-blue font-serif font-bold text-xl">AR</span>
-                    </div>
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm">
+        <nav class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <a href="#home" class="flex items-center gap-3">
+                    <img src="logo.png" alt="Aastha Realty Logo" class="w-14 h-14 object-contain">
                     <div>
-                        <h1 class="font-serif text-2xl font-bold text-deep-blue">Aastha Reality</h1>
-                        <p class="text-cool-grey text-sm">Trusted Real Estate Brokerage</p>
+                        <h1 class="font-serif text-xl md:text-2xl font-bold text-deep-blue">Aastha Realty</h1>
+                        <p class="text-cool-grey text-xs md:text-sm">Trusted Real Estate Brokerage</p>
                     </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-7">
+                    <a href="#home" class="nav-link text-deep-blue font-medium hover:text-elegant-gold">Home</a>
+                    <a href="#properties" class="nav-link text-deep-blue font-medium hover:text-elegant-gold">Properties</a>
+                    <a href="#services" class="nav-link text-deep-blue font-medium hover:text-elegant-gold">Services</a>
+                    <a href="#about" class="nav-link text-deep-blue font-medium hover:text-elegant-gold">About</a>
+                    <a href="#contact" class="nav-link text-deep-blue font-medium hover:text-elegant-gold">Contact</a>
+                    <a href="#post-property" class="nav-link text-deep-blue font-medium hover:text-elegant-gold">Post Property</a>
+                    <a href="#enquiry" class="bg-deep-blue text-white px-6 py-3 rounded-full font-semibold hover:bg-dark-gold hover:text-white transition">
+                        Enquire Now
+                    </a>
                 </div>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">Home</a>
-                    <a href="#about" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">About</a>
-                    <a href="#services" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">Services</a>
-                    <a href="#contact" class="text-deep-blue hover:text-elegant-gold font-medium transition-colors duration-300">Contact</a>
-                    <a href="#enquiry" class="bg-deep-blue text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all duration-300 hover:shadow-premium">Enquire Now</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuButton" class="md:hidden text-deep-blue">
-                    <i class="fas fa-bars text-2xl"></i>
+                <button id="mobileMenuButton" class="md:hidden text-deep-blue text-2xl" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
 
-            <!-- Mobile Navigation -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-4 pb-4">
-                <a href="#home" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">Home</a>
-                <a href="#about" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">About</a>
-                <a href="#services" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">Services</a>
-                <a href="#contact" class="block text-deep-blue hover:text-elegant-gold font-medium py-2">Contact</a>
-                <a href="#enquiry" class="block bg-deep-blue text-white px-6 py-3 rounded-full text-center hover:bg-opacity-90">Enquire Now</a>
+            <div id="mobileMenu" class="hidden md:hidden pb-5 space-y-2">
+                <a href="#home" class="block py-2 text-deep-blue">Home</a>
+                <a href="#properties" class="block py-2 text-deep-blue">Properties</a>
+                <a href="#services" class="block py-2 text-deep-blue">Services</a>
+                <a href="#about" class="block py-2 text-deep-blue">About</a>
+                <a href="#contact" class="block py-2 text-deep-blue">Contact</a>
+                <a href="#post-property" class="block py-2 text-deep-blue">Post Your Property</a>
+                <a href="#enquiry" class="block bg-deep-blue text-white px-5 py-3 rounded-full text-center">Enquire Now</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="gradient-bg text-white pt-16 pb-24 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-20 left-10 w-64 h-64 rounded-full gold-border"></div>
-            <div class="absolute bottom-20 right-10 w-80 h-80 rounded-full gold-border"></div>
-        </div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-4xl mx-auto text-center animate-fade-in">
-                <h2 class="font-serif text-5xl md:text-6xl font-bold mb-6 text-shadow animate-slide-up">
-                    Your Trusted Partner in <span class="text-elegant-gold">Real Estate</span>
-                </h2>
-                <p class="text-xl md:text-2xl text-light-gold mb-10 opacity-90 animate-slide-up" style="animation-delay: 0.2s">
-                    Premium brokerage services connecting buyers and sellers with excellence
-                </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style="animation-delay: 0.4s">
-                    <a href="#enquiry" class="bg-elegant-gold text-deep-blue px-8 py-4 rounded-full text-lg font-semibold hover:bg-dark-gold hover:shadow-gold-glow transition-all duration-300 transform hover:scale-105">
-                        Start Your Property Journey
-                    </a>
-                    <a href="#services" class="bg-transparent text-white border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-deep-blue transition-all duration-300">
-                        Explore Services
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Trust Badges -->
-        <div class="container mx-auto px-4 mt-20">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
-                    <div class="text-4xl font-bold text-elegant-gold mb-2">500+</div>
-                    <div class="text-light-gold">Properties Sold</div>
-                </div>
-                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
-                    <div class="text-4xl font-bold text-elegant-gold mb-2">6+</div>
-                    <div class="text-light-gold">Years Experience</div>
-                </div>
-                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
-                    <div class="text-4xl font-bold text-elegant-gold mb-2">98%</div>
-                    <div class="text-light-gold">Client Satisfaction</div>
-                </div>
-                <div class="text-center backdrop-blur bg-white/10 p-6 rounded-2xl">
-                    <div class="text-4xl font-bold text-elegant-gold mb-2">24/7</div>
-                    <div class="text-light-gold">Support Available</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Hero -->
+    <section id="home" class="gradient-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 hero-grid opacity-70"></div>
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full border border-elegant-gold/30"></div>
+        <div class="absolute -bottom-40 -left-40 w-[30rem] h-[30rem] rounded-full border border-elegant-gold/20"></div>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">About Aastha Reality</h2>
-                    <div class="section-divider w-24 mx-auto my-6"></div>
-                    <p class="text-cool-grey text-lg max-w-3xl mx-auto">
-                        Founded by Gopal Modi, we bring professionalism, trust, and excellence to every real estate transaction
+        <div class="container mx-auto px-4 py-20 md:py-28 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="fade-up">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/20 text-light-gold text-sm font-semibold mb-6">
+                        <i class="fas fa-building"></i>
+                        Trusted Real Estate Brokerage
+                    </span>
+
+                    <h2 class="font-serif text-5xl md:text-6xl font-bold leading-tight">
+                        Find the right property.
+                        <span class="text-elegant-gold">Make the right move.</span>
+                    </h2>
+
+                    <p class="text-light-gold text-lg md:text-xl mt-6 max-w-xl">
+                        Professional brokerage services connecting buyers and sellers with trust, integrity, and excellence.
                     </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mt-9">
+                        <a href="#properties" class="bg-elegant-gold text-deep-blue px-7 py-4 rounded-full font-bold text-center hover:bg-light-gold transition shadow-gold-glow">
+                            Explore Properties
+                        </a>
+                        <a href="#enquiry" class="border-2 border-white text-white px-7 py-4 rounded-full font-bold text-center hover:bg-white hover:text-deep-blue transition">
+                            Talk to Us
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="animate-slide-up">
-                        <div class="relative">
-                            <img src="https://picsum.photos/600/500?random=101" alt="Yash Modi - Founder of Aastha Reality" class="rounded-2xl shadow-premium" loading="lazy">
-                            <!-- <div class="absolute -bottom-6 -right-6 bg-elegant-gold text-deep-blue p-6 rounded-2xl shadow-premium">
-                                <div class="text-2xl font-bold">Yash Modi</div>
-                                <div class="text-sm">Founder</div>
-                            </div> -->
-                        </div>
+
+                <div class="hidden lg:block relative min-h-[380px] fade-up">
+
+    <!-- Property Image -->
+    <div class="absolute inset-x-8 bottom-0 h-72 rounded-t-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+
+        <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+            alt="Premium Property - Aastha Realty"
+            class="w-full h-full object-cover"
+        >
+
+        <!-- Image Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-deep-blue/70 via-transparent to-transparent"></div>
+
+    </div>
+
+    <!-- Aastha Realty Floating Card -->
+    <div class="absolute top-10 right-8 bg-deep-blue/90 backdrop-blur-md border border-white/20 rounded-2xl p-5 w-60 shadow-2xl">
+
+        <p class="text-light-gold text-xs uppercase tracking-widest">
+            Aastha Realty
+        </p>
+
+        <p class="font-serif text-2xl font-bold mt-2 text-white">
+            Property with confidence.
+        </p>
+
+        <div class="mt-4 flex items-center gap-2 text-sm text-light-gold">
+            <i class="fas fa-check-circle text-elegant-gold"></i>
+            Trusted brokerage
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- Property Search + Filters -->
+            <div class="lg:col-span-2 mt-4 bg-white rounded-3xl p-4 md:p-6 shadow-premium text-dark-grey w-full">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div class="relative lg:col-span-2">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-cool-grey"></i>
+                        <input id="propertySearch" type="search"
+                               placeholder="Search property, location, ID or keyword..."
+                               class="w-full pl-11 pr-4 py-3.5 rounded-2xl bg-off-white border border-cool-grey/10 focus:outline-none focus:ring-2 focus:ring-elegant-gold/40">
                     </div>
-                    
-                    <div class="space-y-6 animate-slide-up" style="animation-delay: 0.2s">
-                        <h3 class="font-serif text-3xl font-bold text-deep-blue">Our Vision</h3>
-                        <p class="text-cool-grey leading-relaxed">
-                            To become the most trusted real estate brokerage firm, known for our integrity, professionalism, and exceptional service in connecting buyers with their dream properties.
-                        </p>
-                        
-                        <h3 class="font-serif text-3xl font-bold text-deep-blue mt-8">Our Mission</h3>
-                        <p class="text-cool-grey leading-relaxed">
-                            We are committed to providing personalized, transparent, and efficient brokerage services that exceed client expectations while maintaining the highest ethical standards in the industry.
-                        </p>
-                        
-                        <div class="pt-6">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center">
-                                    <i class="fas fa-shield-alt text-elegant-gold text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-deep-blue">Trust & Integrity</h4>
-                                    <p class="text-cool-grey text-sm">Our foundation is built on honesty and transparency</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center">
-                                    <i class="fas fa-award text-elegant-gold text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-deep-blue">Excellence</h4>
-                                    <p class="text-cool-grey text-sm">Delivering premium service in every transaction</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    <select id="propertyPurpose"
+                            class="px-4 py-3.5 rounded-2xl bg-off-white border border-cool-grey/10 focus:outline-none focus:ring-2 focus:ring-elegant-gold/40">
+                        <option value="">Buy / Rent - Any</option>
+                        <option value="buy">Buy</option>
+                        <option value="rent">Rent</option>
+                        <option value="sell">For Sale</option>
+                    </select>
+
+                    <select id="propertyCategory"
+                            class="px-4 py-3.5 rounded-2xl bg-off-white border border-cool-grey/10 focus:outline-none focus:ring-2 focus:ring-elegant-gold/40">
+                        <option value="">All Property Types</option>
+                        <option value="flat">Flats & Apartments</option>
+                        <option value="house">House / Villa</option>
+                        <option value="land">Land & Plots</option>
+                        <option value="showroom">Showrooms / Shops</option>
+                        <option value="office">Office Spaces</option>
+                        <option value="warehouse">Godowns & Warehouses</option>
+                    </select>
+
+                    <select id="propertyBHK"
+                            class="px-4 py-3.5 rounded-2xl bg-off-white border border-cool-grey/10 focus:outline-none focus:ring-2 focus:ring-elegant-gold/40">
+                        <option value="">Any BHK</option>
+                        <option value="1">1 BHK</option>
+                        <option value="2">2 BHK</option>
+                        <option value="2.5">2.5 BHK</option>
+                        <option value="3">3 BHK</option>
+                        <option value="4">4 BHK</option>
+                        <option value="5">5 BHK</option>
+                    </select>
+
+                    <input id="propertyLocation" type="search"
+                           placeholder="Area / Locality"
+                           class="px-4 py-3.5 rounded-2xl bg-off-white border border-cool-grey/10 focus:outline-none focus:ring-2 focus:ring-elegant-gold/40">
+
+                    <input id="propertyMinPrice" type="number" min="0" step="0.01"
+                           placeholder="Min budget (₹ Lakhs)"
+                           class="px-4 py-3.5 rounded-2xl bg-off-white border border-cool-grey/10 focus:outline-none focus:ring-2 focus:ring-elegant-gold/40">
+
+                    <input id="propertyMaxPrice" type="number" min="0" step="0.01"
+                           placeholder="Max budget (₹ Lakhs)"
+                           class="px-4 py-3.5 rounded-2xl bg-off-white border border-cool-grey/10 focus:outline-none focus:ring-2 focus:ring-elegant-gold/40">
+
+                    <button id="searchProperties"
+                            class="bg-deep-blue text-white px-7 py-3.5 rounded-2xl font-semibold hover:bg-dark-gold transition">
+                        <i class="fas fa-search mr-2"></i>Search Properties
+                    </button>
+                </div>
+                <div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-cool-grey">
+                    <span class="font-semibold text-deep-blue">Filter by:</span>
+                    <span>Property Type</span><span>•</span><span>BHK</span><span>•</span><span>Area</span><span>•</span><span>Buy/Rent</span><span>•</span><span>Budget</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Properties -->
+    <section id="properties" class="py-20 bg-off-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-elegant-gold uppercase tracking-[.25em] text-sm font-bold">Property Listings</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mt-3">Featured Properties</h2>
+                <div class="section-divider w-24 mx-auto my-6"></div>
+                <p class="text-cool-grey">
+                    Explore the latest properties added by Aastha Realty. Listings update automatically from our property database.
+                </p>
+            </div>
+
+            <div id="propertyStatus" class="hidden mb-6"></div>
+
+            <div id="propertiesContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="col-span-full flex justify-center py-12">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <div id="propertyEmpty" class="hidden text-center py-14">
+                <div class="w-16 h-16 rounded-full bg-light-gold flex items-center justify-center mx-auto mb-5">
+                    <i class="fas fa-home text-elegant-gold text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-deep-blue">No matching properties</h3>
+                <p class="text-cool-grey mt-2">Try another search or check back soon for new listings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <p class="text-elegant-gold uppercase tracking-[.25em] text-sm font-bold">Explore</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-deep-blue mt-2">Property Categories</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <button class="category-card bg-off-white rounded-2xl p-6 text-center card-hover" data-category="flat">
+                    <i class="fas fa-building text-elegant-gold text-2xl"></i>
+                    <p class="font-semibold text-deep-blue mt-4">Flats</p>
+                </button>
+                <button class="category-card bg-off-white rounded-2xl p-6 text-center card-hover" data-category="house">
+                    <i class="fas fa-home text-elegant-gold text-2xl"></i>
+                    <p class="font-semibold text-deep-blue mt-4">House / Villa</p>
+                </button>
+                <button class="category-card bg-off-white rounded-2xl p-6 text-center card-hover" data-category="land">
+                    <i class="fas fa-mountain text-elegant-gold text-2xl"></i>
+                    <p class="font-semibold text-deep-blue mt-4">Land</p>
+                </button>
+                <button class="category-card bg-off-white rounded-2xl p-6 text-center card-hover" data-category="showroom">
+                    <i class="fas fa-store text-elegant-gold text-2xl"></i>
+                    <p class="font-semibold text-deep-blue mt-4">Showrooms</p>
+                </button>
+                <button class="category-card bg-off-white rounded-2xl p-6 text-center card-hover" data-category="office">
+                    <i class="fas fa-briefcase text-elegant-gold text-2xl"></i>
+                    <p class="font-semibold text-deep-blue mt-4">Office</p>
+                </button>
+                <button class="category-card bg-off-white rounded-2xl p-6 text-center card-hover" data-category="warehouse">
+                    <i class="fas fa-warehouse text-elegant-gold text-2xl"></i>
+                    <p class="font-semibold text-deep-blue mt-4">Warehouse</p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
     <section id="services" class="py-20 bg-off-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Our Premium Services</h2>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-elegant-gold uppercase tracking-[.25em] text-sm font-bold">What We Do</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mt-3">Our Premium Services</h2>
                 <div class="section-divider w-24 mx-auto my-6"></div>
-                <p class="text-cool-grey text-lg max-w-3xl mx-auto">
-                    Comprehensive brokerage services tailored to meet all your real estate needs
-                </p>
+                <p class="text-cool-grey">Comprehensive brokerage services tailored to your real estate requirements.</p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Cards -->
-                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up">
-                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
-                        <i class="fas fa-home text-deep-blue text-2xl"></i>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover">
+                    <div class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-deep-blue text-xl"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Residential Houses</h3>
-                    <p class="text-cool-grey mb-6">
-                        Find your dream home with our curated selection of premium residential properties, from apartments to luxury villas.
-                    </p>
-                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
-                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-3">Residential Houses</h3>
+                    <p class="text-cool-grey">Find suitable residential properties, from apartments to premium homes.</p>
+                    <a href="#enquiry" class="inline-flex items-center gap-2 text-elegant-gold font-semibold mt-5">Enquire <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.1s">
-                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
-                        <i class="fas fa-mountain text-deep-blue text-2xl"></i>
+
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover">
+                    <div class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-mountain text-deep-blue text-xl"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Lands & Plots</h3>
-                    <p class="text-cool-grey mb-6">
-                        Prime land parcels for residential, commercial, or agricultural purposes with clear titles and legal verification.
-                    </p>
-                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
-                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-3">Lands & Plots</h3>
+                    <p class="text-cool-grey">Explore land opportunities for residential, commercial and other requirements.</p>
+                    <a href="#enquiry" class="inline-flex items-center gap-2 text-elegant-gold font-semibold mt-5">Enquire <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.2s">
-                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
-                        <i class="fas fa-store text-deep-blue text-2xl"></i>
+
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover">
+                    <div class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-store text-deep-blue text-xl"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Showrooms</h3>
-                    <p class="text-cool-grey mb-6">
-                        Premium retail spaces in prime locations with high footfall, perfect for brands and businesses.
-                    </p>
-                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
-                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-3">Showrooms</h3>
+                    <p class="text-cool-grey">Commercial retail spaces for businesses looking for suitable locations.</p>
+                    <a href="#enquiry" class="inline-flex items-center gap-2 text-elegant-gold font-semibold mt-5">Enquire <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.3s">
-                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
-                        <i class="fas fa-building text-deep-blue text-2xl"></i>
+
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover">
+                    <div class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-deep-blue text-xl"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Office Spaces</h3>
-                    <p class="text-cool-grey mb-6">
-                        Modern office spaces in commercial hubs with amenities and infrastructure for growing businesses.
-                    </p>
-                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
-                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-3">Office Spaces</h3>
+                    <p class="text-cool-grey">Professional office spaces for businesses and growing teams.</p>
+                    <a href="#enquiry" class="inline-flex items-center gap-2 text-elegant-gold font-semibold mt-5">Enquire <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.4s">
-                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
-                        <i class="fas fa-warehouse text-deep-blue text-2xl"></i>
+
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover">
+                    <div class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-warehouse text-deep-blue text-xl"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Godowns & Warehouses</h3>
-                    <p class="text-cool-grey mb-6">
-                        Industrial storage spaces with logistics connectivity for manufacturing and distribution businesses.
-                    </p>
-                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
-                        Enquire Now <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-3">Godowns & Warehouses</h3>
+                    <p class="text-cool-grey">Industrial and storage spaces for manufacturing, logistics and distribution needs.</p>
+                    <a href="#enquiry" class="inline-flex items-center gap-2 text-elegant-gold font-semibold mt-5">Enquire <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover animate-slide-up" style="animation-delay: 0.5s">
-                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6">
-                        <i class="fas fa-handshake text-deep-blue text-2xl"></i>
+
+                <div class="bg-white rounded-2xl shadow-premium p-8 card-hover">
+                    <div class="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-deep-blue text-xl"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-4">Consultation Services</h3>
-                    <p class="text-cool-grey mb-6">
-                        Expert advice on property investment, legal documentation, and market trends for informed decisions.
+                    <h3 class="font-serif text-2xl font-bold text-deep-blue mb-3">Consultation Services</h3>
+                    <p class="text-cool-grey">Personalized guidance to help clients make confident real estate decisions.</p>
+                    <a href="#enquiry" class="inline-flex items-center gap-2 text-elegant-gold font-semibold mt-5">Book Consultation <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-14 items-center max-w-6xl mx-auto">
+                <div class="relative">
+                    <div class="gradient-bg rounded-[2rem] p-8 md:p-12 overflow-hidden shadow-premium">
+                        <div class="absolute w-64 h-64 rounded-full border border-elegant-gold/30 -top-20 -right-20"></div>
+                        <div class="relative z-10 text-center">
+                            <img src="logo.png" alt="Aastha Realty" class="w-40 h-40 object-contain mx-auto bg-white/95 rounded-3xl p-5">
+                            <p class="text-light-gold uppercase tracking-[.3em] text-xs font-bold mt-8">Aastha Realty</p>
+                            <h3 class="font-serif text-3xl md:text-4xl font-bold text-white mt-3">Trust. Integrity. Excellence.</h3>
+                            <div class="section-divider my-7"></div>
+                            <p class="text-light-gold leading-relaxed">
+                                Professional brokerage services connecting buyers and sellers with a transparent and client-focused approach.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-elegant-gold uppercase tracking-[.25em] text-sm font-bold">About Us</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mt-3">About Aastha Realty</h2>
+                    <div class="section-divider w-24 my-6"></div>
+                    <p class="text-cool-grey leading-relaxed text-lg">
+                        Founded by Gopal Modi, Aastha Realty brings professionalism, trust, and excellence to every real estate transaction.
                     </p>
-                    <a href="#enquiry" class="text-elegant-gold font-semibold hover:text-dark-gold transition-colors duration-300 inline-flex items-center">
-                        Book Consultation <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+
+                    <div class="space-y-7 mt-8">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-eye text-elegant-gold"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-deep-blue">Our Vision</h3>
+                                <p class="text-cool-grey mt-1">To become a trusted real estate brokerage firm known for integrity, professionalism and exceptional service.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-bullseye text-elegant-gold"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-deep-blue">Our Mission</h3>
+                                <p class="text-cool-grey mt-1">To provide personalized, transparent and efficient brokerage services while maintaining high ethical standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                            <div class="rounded-2xl bg-off-white p-5">
+                                <i class="fas fa-shield-alt text-elegant-gold text-xl"></i>
+                                <h4 class="font-bold text-deep-blue mt-3">Trust & Integrity</h4>
+                                <p class="text-cool-grey text-sm mt-1">Honesty and transparency at every step.</p>
+                            </div>
+                            <div class="rounded-2xl bg-off-white p-5">
+                                <i class="fas fa-award text-elegant-gold text-xl"></i>
+                                <h4 class="font-bold text-deep-blue mt-3">Excellence</h4>
+                                <p class="text-cool-grey text-sm mt-1">Premium service focused on client needs.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-light-gold uppercase tracking-[.25em] text-sm font-bold">Why Aastha Realty</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-3">A better property experience</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-7 max-w-6xl mx-auto">
+                <div class="glass border border-white/10 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mx-auto">
+                        <i class="fas fa-user-tie text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mt-6">Expert Guidance</h3>
+                    <p class="text-light-gold mt-3">Personalized attention around your property requirements.</p>
+                </div>
+                <div class="glass border border-white/10 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mx-auto">
+                        <i class="fas fa-file-contract text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mt-6">Transparent Process</h3>
+                    <p class="text-light-gold mt-3">Clear communication throughout your property journey.</p>
+                </div>
+                <div class="glass border border-white/10 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center mx-auto">
+                        <i class="fas fa-handshake text-deep-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mt-6">Client First</h3>
+                    <p class="text-light-gold mt-3">Focused on finding suitable opportunities for every client.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Why Choose Aastha Reality</h2>
-                <div class="section-divider w-24 mx-auto my-6"></div>
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <p class="text-elegant-gold uppercase tracking-[.25em] text-sm font-bold">FAQ</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mt-3">Frequently Asked Questions</h2>
+                    <div class="section-divider w-24 mx-auto my-6"></div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="faq-item border border-cool-grey/20 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="font-bold text-deep-blue">What areas do you serve?</span>
+                            <i class="fas fa-chevron-down text-elegant-gold"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6 text-cool-grey">
+                            We primarily serve Howrah, Kolkata and surrounding areas.
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-cool-grey/20 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="font-bold text-deep-blue">What types of properties are available?</span>
+                            <i class="fas fa-chevron-down text-elegant-gold"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6 text-cool-grey">
+                            Aastha Realty handles residential houses, lands and plots, showrooms, office spaces, godowns and warehouses, along with consultation services.
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-cool-grey/20 rounded-2xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="font-bold text-deep-blue">How can I enquire about a property?</span>
+                            <i class="fas fa-chevron-down text-elegant-gold"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6 text-cool-grey">
+                            Use the enquiry form below or contact Aastha Realty directly by phone or WhatsApp.
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8 rounded-2xl bg-off-white hover:shadow-premium transition-all duration-300 animate-slide-up">
-                    <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-user-tie text-deep-blue text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- Post Your Property -->
+    <section id="post-property" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-elegant-gold uppercase tracking-[.25em] text-sm font-bold">List With Aastha Realty</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mt-3">Post Your Property</h2>
+                <div class="section-divider w-24 mx-auto my-6"></div>
+                <p class="text-cool-grey">Own a property you want to sell or rent? Submit the details and our team will verify the listing before it goes live.</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto bg-off-white rounded-3xl shadow-premium p-6 md:p-10">
+                <form id="propertyLeadForm" class="space-y-6">
+                    <!-- IMPORTANT: user-submitted properties go to Pending approval -->
+                    <input type="hidden" name="type" value="userproperty">
+
+                    <div class="grid md:grid-cols-2 gap-5">
+                        <div>
+                            <label for="postPurpose" class="block text-deep-blue font-medium mb-2">I want to *</label>
+                            <select id="postPurpose" name="propertyPurpose" required class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30">
+                                <option value="">Select</option>
+                                <option value="Sell">Sell my property</option>
+                                <option value="Rent">Rent my property</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="postPropertyType" class="block text-deep-blue font-medium mb-2">Property Type *</label>
+                            <select id="postPropertyType" name="propertyType" required class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30">
+                                <option value="">Select property type</option>
+                                <option value="Flat / Apartment">Flat / Apartment</option>
+                                <option value="House / Villa">House / Villa</option>
+                                <option value="Land / Plot">Land / Plot</option>
+                                <option value="Showroom / Shop">Showroom / Shop</option>
+                                <option value="Office Space">Office Space</option>
+                                <option value="Warehouse / Godown">Warehouse / Godown</option>
+                            </select>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-deep-blue mb-4">Expert Guidance</h3>
-                    <p class="text-cool-grey">
-                        Personalized attention from experienced professionals who understand your unique requirements
-                    </p>
+
+                    <div>
+                        <label for="propertyTitle" class="block text-deep-blue font-medium mb-2">Property Title *</label>
+                        <input id="propertyTitle" name="propertyName" required maxlength="120"
+                               class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                               placeholder="e.g. 2 BHK Flat for Sale in Howrah">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div>
+                            <label for="postLocation" class="block text-deep-blue font-medium mb-2">Area / Locality *</label>
+                            <input id="postLocation" name="location" required
+                                   class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                   placeholder="e.g. Bankra, Howrah">
+                        </div>
+
+                        <div>
+                            <label for="postBHK" class="block text-deep-blue font-medium mb-2">BHK</label>
+                            <select id="postBHK" name="propertyBHK" class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30">
+                                <option value="">Not Applicable</option>
+                                <option value="1 BHK">1 BHK</option>
+                                <option value="2 BHK">2 BHK</option>
+                                <option value="2.5 BHK">2.5 BHK</option>
+                                <option value="3 BHK">3 BHK</option>
+                                <option value="4 BHK">4 BHK</option>
+                                <option value="5 BHK">5 BHK</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="postArea" class="block text-deep-blue font-medium mb-2">Area (sq.ft)</label>
+                            <input id="postArea" name="propertyArea" type="number" min="0" step="1"
+                                   class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                   placeholder="e.g. 950">
+                        </div>
+
+                        <div>
+                            <label for="postPrice" class="block text-deep-blue font-medium mb-2">Expected Price</label>
+                            <input id="postPrice" name="propertyPrice"
+                                   class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                   placeholder="e.g. ₹35 Lakhs">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="postDescription" class="block text-deep-blue font-medium mb-2">Property Description</label>
+                        <textarea id="postDescription" name="propertyDescription" rows="5" maxlength="1500"
+                                  class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30 resize-none"
+                                  placeholder="Tell us about the property, road access, nearby landmarks, floor, furnishing, etc."></textarea>
+                    </div>
+
+                    <div>
+                        <label for="postImage" class="block text-deep-blue font-medium mb-2">Property Image URL</label>
+                        <input id="postImage" name="propertyImage" type="url"
+                               class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                               placeholder="Paste a publicly accessible image URL">
+                        <p class="text-xs text-cool-grey mt-2">For now, use a public image URL. This is stored in the Property sheet and used for the listing image.</p>
+                    </div>
+
+                    <input type="hidden" id="postLocationValue" name="propertyLocation" value="">
+                    <input type="hidden" id="postSizeValue" name="propertySize" value="">
+
+                    <div class="border-t border-cool-grey/10 pt-6">
+                        <h3 class="font-serif text-2xl font-bold text-deep-blue mb-5">Your Contact Details</h3>
+                        <div class="grid md:grid-cols-3 gap-5">
+                            <div>
+                                <label for="ownerName" class="block text-deep-blue font-medium mb-2">Your Name *</label>
+                                <input id="ownerName" name="ownerName" required
+                                       class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                       placeholder="Full name">
+                            </div>
+                            <div>
+                                <label for="ownerPhone" class="block text-deep-blue font-medium mb-2">Phone *</label>
+                                <input id="ownerPhone" name="ownerPhone" required inputmode="numeric" maxlength="10" pattern="[0-9]{10}"
+                                       class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                       placeholder="10-digit number">
+                            </div>
+                            <div>
+                                <label for="ownerEmail" class="block text-deep-blue font-medium mb-2">Email</label>
+                                <input id="ownerEmail" name="ownerEmail" type="email"
+                                       class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                       placeholder="you@email.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="flex items-start gap-3 text-sm text-cool-grey">
+                        <input id="propertyConsent" type="checkbox" required class="mt-1 accent-[#0A2463]">
+                        <span>I agree that Aastha Realty may contact me regarding this property submission.</span>
+                    </label>
+
+                    <button id="propertyLeadSubmitButton" type="submit"
+                            class="w-full bg-deep-blue text-white py-4 rounded-xl font-semibold hover:bg-dark-gold transition flex items-center justify-center gap-2">
+                        <span id="propertyLeadSubmitText">Submit Property</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <div id="propertyLeadSuccess" class="hidden p-4 rounded-xl bg-green-50 text-green-700 border border-green-200"></div>
+                    <div id="propertyLeadError" class="hidden p-4 rounded-xl bg-red-50 text-red-700 border border-red-200"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact + Forms -->
+    <section id="contact" class="py-20 bg-off-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-elegant-gold uppercase tracking-[.25em] text-sm font-bold">Let's Connect</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mt-3">Get In Touch</h2>
+                <div class="section-divider w-24 mx-auto my-6"></div>
+                <p class="text-cool-grey">Ready to start your property journey? Contact us for a personalized consultation.</p>
+            </div>
+
+            <!-- Contact information first -->
+            <div class="bg-white rounded-3xl shadow-premium p-8 md:p-10 max-w-6xl mx-auto mb-10">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-elegant-gold"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-deep-blue">Office</h4>
+                            <p class="text-cool-grey mt-1">Howrah, West Bengal</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-elegant-gold"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-deep-blue">Phone</h4>
+                            <a href="tel:+919681255921" class="text-cool-grey mt-1 block hover:text-elegant-gold">+91 96812 55921</a>
+                            <p class="text-cool-grey text-sm mt-1">Mon-Sat: 9:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-elegant-gold"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-deep-blue">Email</h4>
+                            <a href="mailto:aastharealty590@gmail.com" class="text-cool-grey mt-1 block hover:text-elegant-gold">aastharealty590@gmail.com</a>
+                            <a href="mailto:ymodi4805@gmail.com" class="text-cool-grey text-sm mt-1 block hover:text-elegant-gold">ymodi4805@gmail.com</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="text-center p-8 rounded-2xl bg-off-white hover:shadow-premium transition-all duration-300 animate-slide-up" style="animation-delay: 0.2s">
-                    <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-file-contract text-deep-blue text-3xl"></i>
+            </div>
+
+            <!-- Review + Enquiry side by side -->
+            <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+                <!-- Review -->
+                <div class="bg-white rounded-3xl shadow-premium p-8">
+                    <div class="mb-7">
+                        <p class="text-elegant-gold uppercase tracking-widest text-xs font-bold">Client Feedback</p>
+                        <h3 class="font-serif text-3xl font-bold text-deep-blue mt-2">Share Your Experience</h3>
+                        <p class="text-cool-grey mt-2">We would love to hear about your experience with Aastha Realty.</p>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-deep-blue mb-4">Legal Assurance</h3>
-                    <p class="text-cool-grey">
-                        Complete legal verification and documentation support for worry-free transactions
-                    </p>
+
+                    <form id="reviewForm" class="space-y-5">
+                        <input type="hidden" name="type" value="review">
+
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-deep-blue font-medium mb-2">Your Name *</label>
+                                <input type="text" name="name" id="reviewName" required
+                                       class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                       placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-deep-blue font-medium mb-2">Designation *</label>
+                                <input type="text" name="designation" id="reviewDesignation" required
+                                       class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                       placeholder="e.g. Business Owner">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-deep-blue font-medium mb-2">Company</label>
+                            <input type="text" name="company" id="reviewCompany"
+                                   class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                   placeholder="Company name">
+                        </div>
+
+                        <div>
+                            <label class="block text-deep-blue font-medium mb-2">Your Review *</label>
+                            <textarea name="review" id="reviewText" rows="4" required
+                                      class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30 resize-none"
+                                      placeholder="Tell us about your experience..."></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-deep-blue font-medium mb-2">Rating *</label>
+                            <select name="rating" id="reviewRating" required
+                                    class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30 bg-white">
+                                <option value="">Select rating</option>
+                                <option value="5">★★★★★ - Excellent</option>
+                                <option value="4">★★★★☆ - Very Good</option>
+                                <option value="3">★★★☆☆ - Good</option>
+                                <option value="2">★★☆☆☆ - Average</option>
+                                <option value="1">★☆☆☆☆ - Poor</option>
+                            </select>
+                        </div>
+
+                        <button id="reviewSubmitButton" type="submit"
+                                class="w-full bg-deep-blue text-white py-4 rounded-xl font-semibold hover:bg-dark-gold transition">
+                            <span id="reviewSubmitText">Submit Review</span>
+                            <i class="fas fa-star ml-2"></i>
+                        </button>
+
+                        <div id="reviewSuccess" class="hidden p-4 rounded-xl bg-green-50 text-green-700 border border-green-200">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            Thank you! Your review has been submitted for approval.
+                        </div>
+
+                        <div id="reviewError" class="hidden p-4 rounded-xl bg-red-50 text-red-700 border border-red-200"></div>
+                    </form>
                 </div>
-                
-                <div class="text-center p-8 rounded-2xl bg-off-white hover:shadow-premium transition-all duration-300 animate-slide-up" style="animation-delay: 0.4s">
-                    <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-hand-holding-usd text-deep-blue text-3xl"></i>
+
+                <!-- Enquiry -->
+                <div id="enquiry" class="bg-white rounded-3xl shadow-premium p-8">
+                    <div class="mb-7">
+                        <p class="text-elegant-gold uppercase tracking-widest text-xs font-bold">Property Enquiry</p>
+                        <h3 class="font-serif text-3xl font-bold text-deep-blue mt-2">Tell Us What You Need</h3>
+                        <p class="text-cool-grey mt-2">Fill out the form and our team will get back to you.</p>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-deep-blue mb-4">Best Value</h3>
-                    <p class="text-cool-grey">
-                        Negotiating the best deals and ensuring you get maximum value for your investment
-                    </p>
+
+                    <form id="enquiryForm" class="space-y-5">
+                        <input type="hidden" name="type" value="enquiry">
+
+                        <div>
+                            <label for="fullName" class="block text-deep-blue font-medium mb-2">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required
+                                   class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                   placeholder="Enter your full name">
+                            <p id="nameError" class="hidden text-red-500 text-sm mt-1"></p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="email" class="block text-deep-blue font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                       placeholder="your@email.com">
+                                <p id="emailError" class="hidden text-red-500 text-sm mt-1"></p>
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-deep-blue font-medium mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required
+                                       class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30"
+                                       placeholder="9876543210" inputmode="numeric">
+                                <p id="phoneError" class="hidden text-red-500 text-sm mt-1"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-deep-blue font-medium mb-2">Service Required *</label>
+                            <select id="service" name="service" required
+                                    class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30 bg-white">
+                                <option value="">Select a service</option>
+                                <option value="residential">Residential Houses</option>
+                                <option value="land">Lands & Plots</option>
+                                <option value="showroom">Showrooms</option>
+                                <option value="office">Office Spaces</option>
+                                <option value="warehouse">Godowns & Warehouses</option>
+                                <option value="consultation">Consultation Services</option>
+                            </select>
+                            <p id="serviceError" class="hidden text-red-500 text-sm mt-1"></p>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-deep-blue font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                      class="w-full px-4 py-3 border border-cool-grey/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-elegant-gold/30 resize-none"
+                                      placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+
+                        <button id="submitButton" type="submit"
+                                class="w-full bg-deep-blue text-white py-4 rounded-xl font-semibold hover:bg-dark-gold transition flex items-center justify-center gap-2">
+                            <span id="submitText">Submit Enquiry</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                        <div id="successMessage" class="hidden p-4 rounded-xl bg-green-50 text-green-700 border border-green-200">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            Thank you! Your enquiry has been submitted successfully.
+                        </div>
+
+                        <div id="errorMessage" class="hidden p-4 rounded-xl bg-red-50 text-red-700 border border-red-200"></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -421,374 +892,146 @@
     <!-- Testimonials -->
     <section class="py-20 gradient-bg text-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-light-gold uppercase tracking-[.25em] text-sm font-bold">Client Stories</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-3">What Our Clients Say</h2>
                 <div class="section-divider w-24 mx-auto my-6"></div>
-                <p class="text-light-gold text-lg max-w-3xl mx-auto">
-                    Hear from our satisfied clients who found their dream properties with us
-                </p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 animate-slide-up">
-                    <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/80?random=201" alt="Rajesh Sharma" class="w-16 h-16 rounded-full mr-4" loading="lazy">
-                        <div>
-                            <h4 class="font-bold text-lg">Rajesh Sharma</h4>
-                            <p class="text-light-gold text-sm">Residential Property Buyer</p>
-                        </div>
-                    </div>
-                    <p class="italic text-light-gold">
-                        "Aastha Reality helped me find my dream home within budget. Their professionalism and attention to detail were exceptional."
-                    </p>
-                    <div class="flex text-elegant-gold mt-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.2s">
-                    <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/80?random=202" alt="Priya Patel" class="w-16 h-16 rounded-full mr-4" loading="lazy">
-                        <div>
-                            <h4 class="font-bold text-lg">Priya Patel</h4>
-                            <p class="text-light-gold text-sm">Commercial Property Seller</p>
-                        </div>
-                    </div>
-                    <p class="italic text-light-gold">
-                        "Yash Modi and his team sold my commercial property at the best market price. Their network and negotiation skills are outstanding."
-                    </p>
-                    <div class="flex text-elegant-gold mt-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.4s">
-                    <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/80?random=203" alt="Amit Verma" class="w-16 h-16 rounded-full mr-4" loading="lazy">
-                        <div>
-                            <h4 class="font-bold text-lg">Amit Verma</h4>
-                            <p class="text-light-gold text-sm">Land Investor</p>
-                        </div>
-                    </div>
-                    <p class="italic text-light-gold">
-                        "The legal verification and documentation support provided by Aastha Reality gave me complete peace of mind in my land investment."
-                    </p>
-                    <div class="flex text-elegant-gold mt-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Frequently Asked Questions</h2>
-                    <div class="section-divider w-24 mx-auto my-6"></div>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
-                        <button class="faq-question w-full text-left flex justify-between items-center">
-                            <h3 class="font-bold text-lg text-deep-blue">What areas do you serve?</h3>
-                            <i class="fas fa-chevron-down text-elegant-gold"></i>
-                        </button>
-                        <div class="faq-answer mt-4 hidden">
-                            <p class="text-cool-grey">
-                                We primarily serve Kolkata and its surrounding regions, with strong expertise across key residential and commercial areas of the city.                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
-                        <button class="faq-question w-full text-left flex justify-between items-center">
-                            <h3 class="font-bold text-lg text-deep-blue">How do you verify property documents?</h3>
-                            <i class="fas fa-chevron-down text-elegant-gold"></i>
-                        </button>
-                        <div class="faq-answer mt-4 hidden">
-                            <p class="text-cool-grey">
-                                We have a dedicated legal team that verifies all property documents including title deeds, encumbrance certificates, and approvals from relevant authorities before proceeding with any transaction.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
-                        <button class="faq-question w-full text-left flex justify-between items-center">
-                            <h3 class="font-bold text-lg text-deep-blue">What are your brokerage fees?</h3>
-                            <i class="fas fa-chevron-down text-elegant-gold"></i>
-                        </button>
-                        <div class="faq-answer mt-4 hidden">
-                            <p class="text-cool-grey">
-                                Our fees are competitive and transparent, typically ranging from 1-2% of the property value depending on the service type and property value. We provide a detailed fee structure before starting any engagement.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="border border-cool-grey/20 rounded-2xl p-6 hover:shadow-premium transition-all duration-300">
-                        <button class="faq-question w-full text-left flex justify-between items-center">
-                            <h3 class="font-bold text-lg text-deep-blue">How long does the buying process take?</h3>
-                            <i class="fas fa-chevron-down text-elegant-gold"></i>
-                        </button>
-                        <div class="faq-answer mt-4 hidden">
-                            <p class="text-cool-grey">
-                                The timeline varies based on property type and transaction complexity. Typically, residential properties takes 15-20 days, while commercial properties may take 60-90 days including due diligence and documentation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Enquiry Form -->
-    <section id="contact" class="py-20 bg-off-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-deep-blue mb-4">Get In Touch</h2>
-                    <div class="section-divider w-24 mx-auto my-6"></div>
-                    <p class="text-cool-grey text-lg max-w-3xl mx-auto">
-                        Ready to start your property journey? Contact us for a personalized consultation
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-12">
-                    <!-- Contact Info -->
-                    <div class="animate-slide-up">
-                        <div class="bg-white rounded-2xl shadow-premium p-8">
-                            <h3 class="font-serif text-2xl font-bold text-deep-blue mb-8">Contact Information</h3>
-                            
-                            <div class="space-y-6">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-map-marker-alt text-elegant-gold text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-deep-blue mb-1">Office Address</h4>
-                                        <p class="text-cool-grey">Howrah,West Bengal</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-phone text-elegant-gold text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-deep-blue mb-1">Phone Number</h4>
-                                        <p class="text-cool-grey">+91 96812 55921</p>
-                                        <p class="text-cool-grey text-sm">Mon-Sat: 9:00 AM - 7:00 PM</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-12 h-12 rounded-full bg-light-gold flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-envelope text-elegant-gold text-xl"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-deep-blue mb-1">Email Address</h4>
-                                        <p class="text-cool-grey">ymodi4805@gmail.com</p>
-                                        <p class="text-cool-grey">aastharealty590@gmail.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-10 pt-8 border-t border-cool-grey/20">
-                                <h4 class="font-bold text-deep-blue mb-4">Follow Us</h4>
-                                <div class="flex space-x-4">
-                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 rounded-full bg-deep-blue text-white flex items-center justify-center hover:bg-elegant-gold transition-colors duration-300">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Enquiry Form -->
-                    <div id="enquiry" class="animate-slide-up" style="animation-delay: 0.2s">
-                        <div class="bg-white rounded-2xl shadow-premium p-8">
-                            <h3 class="font-serif text-2xl font-bold text-deep-blue mb-2">Send Enquiry</h3>
-                            <p class="text-cool-grey mb-8">Fill out the form below and we'll get back to you within 24 hours</p>
-                            
-                            <form
-    id="enquiryForm"
-    class="space-y-6"
-    method="POST"
-    action="https://script.google.com/macros/s/AKfycbxZcIfiV86XaDm2YMEfNtKI1KGbSEi6LhkxHh-X-k4M0lOVMTuQAcX96jkABVyDBLAUcQ/exec"
-    target="hidden_iframe">
-                                <div>
-                                    <label for="fullName" class="block text-deep-blue font-medium mb-2">Full Name *</label>
-                                    <input type="text" id="fullName" name="fullName" required 
-                                           class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300"
-                                           placeholder="Enter your full name">
-                                    <div class="text-red-500 text-sm mt-1 hidden" id="nameError"></div>
-                                </div>
-                                
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="email" class="block text-deep-blue font-medium mb-2">Email Address *</label>
-                                        <input type="email" id="email" name="email" required 
-                                               class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300"
-                                               placeholder="your@email.com">
-                                        <div class="text-red-500 text-sm mt-1 hidden" id="emailError"></div>
-                                    </div>
-                                    
-                                    <div>
-                                        <label for="phone" class="block text-deep-blue font-medium mb-2">Phone Number *</label>
-                                        <input type="tel" id="phone" name="phone" required 
-                                               class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300"
-                                               placeholder="+91 98765 43210">
-                                        <div class="text-red-500 text-sm mt-1 hidden" id="phoneError"></div>
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <label for="service" class="block text-deep-blue font-medium mb-2">Service Required *</label>
-                                    <select id="service" name="service" required 
-                                            class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300 appearance-none bg-white">
-                                        <option value="">Select a service</option>
-                                        <option value="residential">Residential Houses</option>
-                                        <option value="land">Lands & Plots</option>
-                                        <option value="showroom">Showrooms</option>
-                                        <option value="office">Office Spaces</option>
-                                        <option value="warehouse">Godowns & Warehouses</option>
-                                        <option value="consultation">Consultation Services</option>
-                                    </select>
-                                    <div class="text-red-500 text-sm mt-1 hidden" id="serviceError"></div>
-                                </div>
-                                
-                                <div>
-                                    <label for="message" class="block text-deep-blue font-medium mb-2">Message (Optional)</label>
-                                    <textarea id="message" name="message" rows="4"
-                                              class="w-full px-4 py-3 border border-cool-grey/30 rounded-lg focus:outline-none focus:border-elegant-gold form-input transition-colors duration-300 resize-none"
-                                              placeholder="Tell us about your requirements..."></textarea>
-                                </div>
-                                
-                                <div class="pt-4">
-                                    <button type="submit" 
-                                            class="w-full bg-deep-blue text-white py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:shadow-premium flex items-center justify-center">
-                                        <span id="submitText">Submit Enquiry</span>
-                                        <i class="fas fa-paper-plane ml-2"></i>
-                                    </button>
-                                </div>
-                                
-                                <div id="successMessage" class="hidden p-4 bg-green-50 text-green-700 rounded-lg border border-green-200">
-                                    <i class="fas fa-check-circle mr-2"></i>
-                                    <span>Thank you! Your enquiry has been submitted successfully. We'll contact you soon.</span>
-                                </div>
-                                
-                                <div id="errorMessage" class="hidden p-4 bg-red-50 text-red-700 rounded-lg border border-red-200">
-                                    <i class="fas fa-exclamation-circle mr-2"></i>
-                                    <span>There was an error submitting your enquiry. Please try again.</span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+            <div id="reviewsContainer" class="grid md:grid-cols-3 gap-7">
+                <div class="md:col-span-3 flex justify-center py-10">
+                    <div class="spinner"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-deep-blue text-white pt-12 pb-8">
+    <footer class="bg-deep-blue text-white pt-14 pb-8">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <div class="grid md:grid-cols-4 gap-10 mb-10">
                 <div>
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center">
-                            <span class="text-deep-blue font-serif font-bold">AR</span>
-                        </div>
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="logo.png" alt="Aastha Realty Logo" class="w-12 h-12 object-contain bg-white rounded-xl p-1">
                         <div>
-                            <h3 class="font-serif text-xl font-bold">Aastha Reality</h3>
-                            <p class="text-light-gold text-sm">Trusted Real Estate Brokerage</p>
+                            <h3 class="font-serif text-xl font-bold">Aastha Realty</h3>
+                            <p class="text-light-gold text-xs">Trusted Real Estate Brokerage</p>
                         </div>
                     </div>
-                    <p class="text-cool-grey text-sm">
-                        Professional brokerage services connecting buyers and sellers with trust, integrity, and excellence since 2008.
+                    <p class="text-white/70 text-sm leading-relaxed">
+                        Professional brokerage services connecting buyers and sellers with trust, integrity, and excellence.
                     </p>
                 </div>
-                
+
                 <div>
-                    <h4 class="font-serif text-lg font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Home</a></li>
-                        <li><a href="#about" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">About Us</a></li>
-                        <li><a href="#services" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Services</a></li>
-                        <li><a href="#contact" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Contact</a></li>
-                    </ul>
+                    <h4 class="font-serif text-lg font-bold mb-5">Quick Links</h4>
+                    <div class="space-y-3 text-white/70 text-sm">
+                        <a href="#home" class="block hover:text-elegant-gold">Home</a>
+                        <a href="#properties" class="block hover:text-elegant-gold">Properties</a>
+                        <a href="#services" class="block hover:text-elegant-gold">Services</a>
+                        <a href="#about" class="block hover:text-elegant-gold">About</a>
+                        <a href="#contact" class="block hover:text-elegant-gold">Contact</a>
+                        <a href="#post-property" class="block hover:text-elegant-gold">Post Your Property</a>
+                    </div>
                 </div>
-                
+
                 <div>
-                    <h4 class="font-serif text-lg font-bold mb-6">Our Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Residential Houses</a></li>
-                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Lands & Plots</a></li>
-                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Showrooms</a></li>
-                        <li><a href="#enquiry" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300">Office Spaces</a></li>
-                    </ul>
+                    <h4 class="font-serif text-lg font-bold mb-5">Our Services</h4>
+                    <div class="space-y-3 text-white/70 text-sm">
+                        <a href="#enquiry" class="block hover:text-elegant-gold">Residential Houses</a>
+                        <a href="#enquiry" class="block hover:text-elegant-gold">Lands & Plots</a>
+                        <a href="#enquiry" class="block hover:text-elegant-gold">Showrooms</a>
+                        <a href="#enquiry" class="block hover:text-elegant-gold">Office Spaces</a>
+                    </div>
                 </div>
-                
+
                 <div>
-                    <h4 class="font-serif text-lg font-bold mb-6">Business Hours</h4>
-                    <ul class="space-y-3 text-cool-grey text-sm">
-                        <li class="flex justify-between">
-                            <span>Monday - Friday</span>
-                            <span>9:00 AM - 7:00 PM</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Saturday</span>
-                            <span>10:00 AM - 5:00 PM</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Sunday</span>
-                            <span>Emergency Only</span>
-                        </li>
-                    </ul>
+                    <h4 class="font-serif text-lg font-bold mb-5">Contact</h4>
+                    <p class="text-white/70 text-sm">Howrah, West Bengal</p>
+                    <a href="tel:+919681255921" class="block text-white/70 text-sm mt-2 hover:text-elegant-gold">+91 96812 55921</a>
+                    <a href="mailto:aastharealty590@gmail.com" class="block text-white/70 text-sm mt-2 hover:text-elegant-gold">aastharealty590@gmail.com</a>
                 </div>
             </div>
-            
-            <div class="pt-8 border-t border-cool-grey/30">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-cool-grey text-sm mb-4 md:mb-0">
-                        &copy; 2024 Aastha Reality. All rights reserved. | Owned by Yash Modi
-                    </p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300 text-sm">Privacy Policy</a>
-                        <a href="#" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300 text-sm">Terms of Service</a>
-                        <a href="#" class="text-cool-grey hover:text-elegant-gold transition-colors duration-300 text-sm">Disclaimer</a>
-                    </div>
-                </div>
+
+            <div class="border-t border-white/15 pt-6 flex flex-col md:flex-row justify-between gap-3 text-sm text-white/60">
+                <p>&copy; <span id="currentYear"></span> Aastha Realty. All rights reserved.</p>
+                <p>Professional Real Estate Brokerage</p>
             </div>
         </div>
     </footer>
-    <iframe
-    name="hidden_iframe"
-    style="display:none;"
-    id="hidden_iframe">
-</iframe>
 
-    <script src = "script.js"></script> 
+    <script>
+        // ==========================================
+        // AASTHA REALTY - USER PROPERTY SUBMISSION
+        // ==========================================
+        const AASTHA_REALTY_API =
+            "https://script.google.com/macros/s/AKfycbwAwAddyT6fJEaikb1T3ajnIKb_GaAbioD9NxA7dC2yXkkJ8sO7c7zS-UI3gY_59RQAoA/exec";
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("propertyLeadForm");
+            if (!form) return;
+
+            const button = document.getElementById("propertyLeadSubmitButton");
+            const buttonText = document.getElementById("propertyLeadSubmitText");
+            const success = document.getElementById("propertyLeadSuccess");
+            const error = document.getElementById("propertyLeadError");
+            const locationInput = document.getElementById("postLocation");
+            const hiddenLocation = document.getElementById("postLocationValue");
+            const areaInput = document.getElementById("postArea");
+            const hiddenSize = document.getElementById("postSizeValue");
+
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                success.classList.add("hidden");
+                error.classList.add("hidden");
+
+                hiddenLocation.value = locationInput.value.trim();
+                hiddenSize.value = areaInput.value.trim();
+
+                button.disabled = true;
+                buttonText.textContent = "Submitting...";
+
+                try {
+                    const formData = new FormData(form);
+                    formData.set("type", "userproperty");
+
+                    const response = await fetch(AASTHA_REALTY_API, {
+                        method: "POST",
+                        body: new URLSearchParams(formData)
+                    });
+
+                    const result = await response.json();
+
+                    if (!result.success) {
+                        throw new Error(result.message || "Unable to submit property.");
+                    }
+
+                    success.innerHTML =
+                        '<i class="fas fa-check-circle mr-2"></i>' +
+                        'Property submitted successfully. Your listing is now pending admin approval.' +
+                        (result.propertyId ? '<br><span class="text-sm">Property ID: ' + result.propertyId + '</span>' : '');
+
+                    success.classList.remove("hidden");
+                    form.reset();
+                    hiddenLocation.value = "";
+                    hiddenSize.value = "";
+                    success.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                } catch (err) {
+                    console.error("Property submission error:", err);
+                    error.textContent = err.message || "Something went wrong. Please try again.";
+                    error.classList.remove("hidden");
+                    error.scrollIntoView({ behavior: "smooth", block: "center" });
+                } finally {
+                    button.disabled = false;
+                    buttonText.textContent = "Submit Property";
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>

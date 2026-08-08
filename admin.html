@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Aastha Realty - Admin</title>
+
+
+    <!-- Tailwind -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Fonts -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f7fa;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gold {
+            color: #d4af37;
+        }
+
+        .bg-gold {
+            background: #d4af37;
+        }
+
+        .bg-navy {
+            background: #071a33;
+        }
+
+        .border-gold {
+            border-color: #d4af37;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+     ================================================== -->
+
+<header class="bg-navy text-white shadow-lg">
+
+    <div
+        class="max-w-7xl mx-auto px-6 py-5
+               flex flex-col md:flex-row
+               md:items-center
+               md:justify-between
+               gap-4">
+
+
+        <div>
+
+            <h1 class="font-serif text-3xl font-bold">
+
+                Aastha Realty
+
+            </h1>
+
+            <p class="text-slate-300 text-sm mt-1">
+
+                Admin Dashboard
+
+            </p>
+
+        </div>
+
+
+        <div
+            class="flex items-center gap-3
+                   text-sm text-slate-300">
+
+            <i class="fas fa-shield-halved gold"></i>
+
+            Property Management
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MAIN
+     ================================================== -->
+
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+
+    <!-- ==================================================
+         DASHBOARD STATS
+         ================================================== -->
+
+    <section
+        class="grid grid-cols-1
+               sm:grid-cols-2
+               lg:grid-cols-4
+               gap-5
+               mb-10">
+
+
+        <!-- Total -->
+
+        <div
+            class="bg-white rounded-2xl
+                   shadow-sm border border-slate-200
+                   p-6">
+
+            <div
+                class="flex items-center
+                       justify-between">
+
+                <div>
+
+                    <p
+                        class="text-sm
+                               text-slate-500">
+
+                        Total Properties
+
+                    </p>
+
+                    <p
+                        id="totalProperties"
+                        class="text-3xl
+                               font-bold
+                               text-slate-900
+                               mt-2">
+
+                        0
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="w-12 h-12
+                           rounded-xl
+                           bg-slate-100
+                           flex items-center
+                           justify-center">
+
+                    <i
+                        class="fas fa-building
+                               text-slate-700
+                               text-xl">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Pending -->
+
+        <div
+            class="bg-white rounded-2xl
+                   shadow-sm border border-amber-200
+                   p-6">
+
+            <div
+                class="flex items-center
+                       justify-between">
+
+                <div>
+
+                    <p
+                        class="text-sm
+                               text-slate-500">
+
+                        Pending
+
+                    </p>
+
+                    <p
+                        id="pendingProperties"
+                        class="text-3xl
+                               font-bold
+                               text-amber-600
+                               mt-2">
+
+                        0
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="w-12 h-12
+                           rounded-xl
+                           bg-amber-50
+                           flex items-center
+                           justify-center">
+
+                    <i
+                        class="fas fa-clock
+                               text-amber-600
+                               text-xl">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Approved -->
+
+        <div
+            class="bg-white rounded-2xl
+                   shadow-sm border border-green-200
+                   p-6">
+
+            <div
+                class="flex items-center
+                       justify-between">
+
+                <div>
+
+                    <p
+                        class="text-sm
+                               text-slate-500">
+
+                        Approved
+
+                    </p>
+
+                    <p
+                        id="approvedProperties"
+                        class="text-3xl
+                               font-bold
+                               text-green-600
+                               mt-2">
+
+                        0
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="w-12 h-12
+                           rounded-xl
+                           bg-green-50
+                           flex items-center
+                           justify-center">
+
+                    <i
+                        class="fas fa-circle-check
+                               text-green-600
+                               text-xl">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- User Posted -->
+
+        <div
+            class="bg-white rounded-2xl
+                   shadow-sm border border-blue-200
+                   p-6">
+
+            <div
+                class="flex items-center
+                       justify-between">
+
+                <div>
+
+                    <p
+                        class="text-sm
+                               text-slate-500">
+
+                        User Posted
+
+                    </p>
+
+                    <p
+                        id="userProperties"
+                        class="text-3xl
+                               font-bold
+                               text-blue-600
+                               mt-2">
+
+                        0
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="w-12 h-12
+                           rounded-xl
+                           bg-blue-50
+                           flex items-center
+                           justify-center">
+
+                    <i
+                        class="fas fa-users
+                               text-blue-600
+                               text-xl">
+                    </i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ADD PROPERTY
+         ================================================== -->
+
+    <section
+        class="bg-white rounded-2xl
+               shadow-sm
+               border border-slate-200
+               p-6 md:p-8
+               mb-10">
+
+
+        <div class="mb-8">
+
+            <h2
+                class="font-serif
+                       text-3xl
+                       font-bold
+                       text-slate-900">
+
+                Add Property
+
+            </h2>
+
+            <p
+                class="text-slate-500
+                       mt-2">
+
+                Add a verified Aastha Realty property.
+
+            </p>
+
+        </div>
+
+
+
+        <form
+            id="propertyForm"
+            class="grid md:grid-cols-2
+                   gap-5">
+
+
+            <!-- Property ID -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Property ID
+
+                </label>
+
+                <input
+                    type="text"
+                    id="propertyId"
+                    name="propertyId"
+                    required
+                    placeholder="AR001"
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg
+                           focus:outline-none
+                           focus:ring-2
+                           focus:ring-yellow-600">
+
+            </div>
+
+
+            <!-- Property Name -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Property Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="propertyName"
+                    name="propertyName"
+                    required
+                    placeholder="3 BHK Premium Apartment"
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg
+                           focus:outline-none
+                           focus:ring-2
+                           focus:ring-yellow-600">
+
+            </div>
+
+
+            <!-- Type -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Property Type
+
+                </label>
+
+                <select
+                    id="propertyType"
+                    name="propertyType"
+                    required
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+                    <option value="">
+                        Select Type
+                    </option>
+
+                    <option>
+                        Flat
+                    </option>
+
+                    <option>
+                        House / Villa
+                    </option>
+
+                    <option>
+                        Land / Plot
+                    </option>
+
+                    <option>
+                        Showroom
+                    </option>
+
+                    <option>
+                        Office
+                    </option>
+
+                    <option>
+                        Warehouse / Godown
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Purpose -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Purpose
+
+                </label>
+
+                <select
+                    id="propertyPurpose"
+                    name="propertyPurpose"
+                    required
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+                    <option value="">
+                        Select Purpose
+                    </option>
+
+                    <option>
+                        Sale
+                    </option>
+
+                    <option>
+                        Rent
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BHK -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    BHK
+
+                </label>
+
+                <select
+                    id="propertyBHK"
+                    name="propertyBHK"
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+                    <option value="">
+                        Not Applicable
+                    </option>
+
+                    <option>1 BHK</option>
+                    <option>2 BHK</option>
+                    <option>3 BHK</option>
+                    <option>4 BHK</option>
+                    <option>5 BHK</option>
+                    <option>5+ BHK</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Area -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Area / Locality
+
+                </label>
+
+                <input
+                    type="text"
+                    id="propertyArea"
+                    name="propertyArea"
+                    placeholder="Howrah"
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+            </div>
+
+
+            <!-- Size -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Size
+
+                </label>
+
+                <input
+                    type="text"
+                    id="propertySize"
+                    name="propertySize"
+                    placeholder="950 sq.ft"
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+            </div>
+
+
+            <!-- Price -->
+
+            <div>
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Price
+
+                </label>
+
+                <input
+                    type="text"
+                    id="propertyPrice"
+                    name="propertyPrice"
+                    placeholder="₹45 Lakhs"
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+            </div>
+
+
+            <!-- Image -->
+
+            <div class="md:col-span-2">
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Image URL
+
+                </label>
+
+                <input
+                    type="url"
+                    id="propertyImage"
+                    name="propertyImage"
+                    placeholder="https://..."
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+            </div>
+
+
+            <!-- Description -->
+
+            <div class="md:col-span-2">
+
+                <label
+                    class="block text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Description
+
+                </label>
+
+                <textarea
+                    id="propertyDescription"
+                    name="propertyDescription"
+                    rows="5"
+                    placeholder="Property details..."
+                    class="w-full px-4 py-3
+                           border border-slate-300
+                           rounded-lg"></textarea>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <div class="md:col-span-2">
+
+                <button
+                    type="submit"
+                    id="submitPropertyButton"
+                    class="w-full md:w-auto
+                           px-8 py-4
+                           bg-navy
+                           text-white
+                           rounded-lg
+                           font-semibold
+                           hover:bg-slate-800
+                           transition">
+
+                    <i class="fas fa-plus mr-2"></i>
+
+                    Add Property
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+        <div
+            id="formMessage"
+            class="hidden mt-5
+                   p-4 rounded-lg">
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PROPERTY MANAGEMENT
+         ================================================== -->
+
+    <section
+        class="bg-white rounded-2xl
+               shadow-sm
+               border border-slate-200
+               p-6 md:p-8">
+
+
+        <div
+            class="flex flex-col
+                   lg:flex-row
+                   lg:items-center
+                   lg:justify-between
+                   gap-5
+                   mb-6">
+
+
+            <div>
+
+                <h2
+                    class="font-serif
+                           text-3xl
+                           font-bold
+                           text-slate-900">
+
+                    Property Management
+
+                </h2>
+
+                <p
+                    class="text-slate-500
+                           mt-2">
+
+                    Review and manage all property submissions.
+
+                </p>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div class="relative">
+
+                <i
+                    class="fas fa-search
+                           absolute
+                           left-4 top-1/2
+                           -translate-y-1/2
+                           text-slate-400">
+                </i>
+
+                <input
+                    type="text"
+                    id="searchProperties"
+                    placeholder="Search properties..."
+                    class="w-full lg:w-72
+                           pl-11 pr-4 py-3
+                           border border-slate-300
+                           rounded-lg">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Filters -->
+
+        <div
+            class="flex flex-wrap gap-2 mb-6">
+
+
+            <button
+                onclick="filterProperties('all')"
+                class="filter-button active-filter
+                       px-4 py-2 rounded-full
+                       bg-navy text-white
+                       text-sm">
+
+                All
+
+            </button>
+
+
+            <button
+                onclick="filterProperties('pending')"
+                class="filter-button
+                       px-4 py-2 rounded-full
+                       bg-slate-100
+                       text-slate-700
+                       text-sm">
+
+                Pending
+
+            </button>
+
+
+            <button
+                onclick="filterProperties('approved')"
+                class="filter-button
+                       px-4 py-2 rounded-full
+                       bg-slate-100
+                       text-slate-700
+                       text-sm">
+
+                Approved
+
+            </button>
+
+
+            <button
+                onclick="filterProperties('rejected')"
+                class="filter-button
+                       px-4 py-2 rounded-full
+                       bg-slate-100
+                       text-slate-700
+                       text-sm">
+
+                Rejected
+
+            </button>
+
+
+            <button
+                onclick="filterProperties('user')"
+                class="filter-button
+                       px-4 py-2 rounded-full
+                       bg-slate-100
+                       text-slate-700
+                       text-sm">
+
+                User Posted
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Loading -->
+
+        <div
+            id="loadingProperties"
+            class="text-center
+                   py-12
+                   text-slate-500">
+
+            <i
+                class="fas fa-spinner
+                       fa-spin
+                       text-2xl
+                       mb-3">
+            </i>
+
+            <p>
+                Loading properties...
+            </p>
+
+        </div>
+
+
+
+        <!-- Property Cards -->
+
+        <div
+            id="propertyList"
+            class="grid
+                   md:grid-cols-2
+                   xl:grid-cols-3
+                   gap-6">
+        </div>
+
+
+
+        <!-- Empty -->
+
+        <div
+            id="emptyProperties"
+            class="hidden
+                   text-center
+                   py-12">
+
+            <i
+                class="fas fa-building-circle-xmark
+                       text-4xl
+                       text-slate-300
+                       mb-4">
+            </i>
+
+            <p
+                class="text-slate-500">
+
+                No properties found.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+     ================================================== -->
+
+<script>
+
+
+// ==========================================
+// API URL
+// ==========================================
+
+const API_URL =
+    "https://script.google.com/macros/s/AKfycbwAwAddyT6fJEaikb1T3ajnIKb_GaAbioD9NxA7dC2yXkkJ8sO7c7zS-UI3gY_59RQAoA/exec";
+
+
+// ==========================================
+// GLOBAL DATA
+// ==========================================
+
+let allProperties = [];
+
+let currentFilter = "all";
+
+
+// ==========================================
+// LOAD PROPERTIES
+// ==========================================
+
+async function loadProperties() {
+
+    const loading =
+        document.getElementById(
+            "loadingProperties"
+        );
+
+    try {
+
+        loading.classList.remove("hidden");
+
+
+        const response =
+            await fetch(
+                API_URL +
+                "?action=adminproperties"
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (!Array.isArray(data)) {
+
+            throw new Error(
+                "Invalid property response"
+            );
+
+        }
+
+
+        allProperties = data;
+
+
+        updateStats();
+
+        renderProperties();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById(
+            "propertyList"
+        ).innerHTML = `
+
+            <div class="md:col-span-2 xl:col-span-3
+                        p-6 rounded-xl
+                        bg-red-50
+                        border border-red-200
+                        text-red-700">
+
+                Unable to load properties.
+
+            </div>
+
+        `;
+
+    } finally {
+
+        loading.classList.add("hidden");
+
+    }
+
+}
+
+
+// ==========================================
+// UPDATE DASHBOARD
+// ==========================================
+
+function updateStats() {
+
+    const total =
+        allProperties.length;
+
+
+    const pending =
+        allProperties.filter(
+            p =>
+                String(p.status)
+                    .toLowerCase()
+                    === "pending"
+        ).length;
+
+
+    const approved =
+        allProperties.filter(
+            p =>
+                String(p.status)
+                    .toLowerCase()
+                    === "approved"
+        ).length;
+
+
+    const user =
+        allProperties.filter(
+            p =>
+                String(p.source)
+                    .toLowerCase()
+                    === "user posted"
+        ).length;
+
+
+    document.getElementById(
+        "totalProperties"
+    ).textContent = total;
+
+
+    document.getElementById(
+        "pendingProperties"
+    ).textContent = pending;
+
+
+    document.getElementById(
+        "approvedProperties"
+    ).textContent = approved;
+
+
+    document.getElementById(
+        "userProperties"
+    ).textContent = user;
+
+}
+
+
+// ==========================================
+// FILTER
+// ==========================================
+
+function filterProperties(filter) {
+
+    currentFilter = filter;
+
+
+    document
+        .querySelectorAll(".filter-button")
+        .forEach(button => {
+
+            button.classList.remove(
+                "bg-navy",
+                "text-white"
+            );
+
+            button.classList.add(
+                "bg-slate-100",
+                "text-slate-700"
+            );
+
+        });
+
+
+    event.target.classList.remove(
+        "bg-slate-100",
+        "text-slate-700"
+    );
+
+    event.target.classList.add(
+        "bg-navy",
+        "text-white"
+    );
+
+
+    renderProperties();
+
+}
+
+
+// ==========================================
+// RENDER
+// ==========================================
+
+function renderProperties() {
+
+    const list =
+        document.getElementById(
+            "propertyList"
+        );
+
+
+    const empty =
+        document.getElementById(
+            "emptyProperties"
+        );
+
+
+    const search =
+        document.getElementById(
+            "searchProperties"
+        )
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    let filtered =
+        [...allProperties];
+
+
+    // Status filter
+
+    if (currentFilter === "pending") {
+
+        filtered =
+            filtered.filter(
+                p =>
+                    String(p.status)
+                        .toLowerCase()
+                        === "pending"
+            );
+
+    }
+
+
+    if (currentFilter === "approved") {
+
+        filtered =
+            filtered.filter(
+                p =>
+                    String(p.status)
+                        .toLowerCase()
+                        === "approved"
+            );
+
+    }
+
+
+    if (currentFilter === "rejected") {
+
+        filtered =
+            filtered.filter(
+                p =>
+                    String(p.status)
+                        .toLowerCase()
+                        === "rejected"
+            );
+
+    }
+
+
+    if (currentFilter === "user") {
+
+        filtered =
+            filtered.filter(
+                p =>
+                    String(p.source)
+                        .toLowerCase()
+                        === "user posted"
+            );
+
+    }
+
+
+    // Search
+
+    if (search) {
+
+        filtered =
+            filtered.filter(p => {
+
+                const text = [
+
+                    p.id,
+                    p.propertyName,
+                    p.type,
+                    p.purpose,
+                    p.bhk,
+                    p.area,
+                    p.price,
+                    p.ownerName,
+                    p.ownerPhone
+
+                ]
+                .join(" ")
+                .toLowerCase();
+
+
+                return text.includes(search);
+
+            });
+
+    }
+
+
+    list.innerHTML = "";
+
+
+    if (!filtered.length) {
+
+        empty.classList.remove("hidden");
+
+        return;
+
+    }
+
+
+    empty.classList.add("hidden");
+
+
+    filtered.forEach(property => {
+
+        list.appendChild(
+            createPropertyCard(property)
+        );
+
+    });
+
+}
+
+
+// ==========================================
+// PROPERTY CARD
+// ==========================================
+
+function createPropertyCard(property) {
+
+    const card =
+        document.createElement("div");
+
+
+    const status =
+        String(property.status || "")
+            .toLowerCase();
+
+
+    const isUser =
+        String(property.source || "")
+            .toLowerCase()
+            === "user posted";
+
+
+    let statusClass =
+        "bg-slate-100 text-slate-700";
+
+
+    if (status === "pending") {
+
+        statusClass =
+            "bg-amber-100 text-amber-700";
+
+    }
+
+
+    if (status === "approved") {
+
+        statusClass =
+            "bg-green-100 text-green-700";
+
+    }
+
+
+    if (status === "rejected") {
+
+        statusClass =
+            "bg-red-100 text-red-700";
+
+    }
+
+
+    card.className =
+        "bg-white border border-slate-200 " +
+        "rounded-2xl overflow-hidden " +
+        "shadow-sm hover:shadow-lg transition";
+
+
+    card.innerHTML = `
+
+        <!-- Image -->
+
+        <div class="h-48 bg-slate-100 overflow-hidden">
+
+            ${
+                property.image
+                ?
+
+                `<img
+                    src="${escapeHtml(property.image)}"
+                    class="w-full h-full object-cover"
+                    alt="Property">`
+
+                :
+
+                `<div class="w-full h-full
+                            flex items-center
+                            justify-center">
+
+                    <i class="fas fa-building
+                              text-4xl
+                              text-slate-300">
+                    </i>
+
+                </div>`
+            }
+
+        </div>
+
+
+        <!-- Content -->
+
+        <div class="p-5">
+
+            <div
+                class="flex items-start
+                       justify-between
+                       gap-3
+                       mb-3">
+
+                <div>
+
+                    <p
+                        class="text-xs
+                               text-slate-400">
+
+                        ${escapeHtml(property.id)}
+
+                    </p>
+
+                    <h3
+                        class="font-serif
+                               text-xl
+                               font-bold
+                               text-slate-900">
+
+                        ${escapeHtml(
+                            property.propertyName
+                            || "Untitled Property"
+                        )}
+
+                    </h3>
+
+                </div>
+
+
+                <span
+                    class="px-3 py-1
+                           rounded-full
+                           text-xs
+                           font-semibold
+                           ${statusClass}">
+
+                    ${escapeHtml(
+                        property.status || "Unknown"
+                    )}
+
+                </span>
+
+            </div>
+
+
+            <div
+                class="space-y-2
+                       text-sm
+                       text-slate-600
+                       mb-4">
+
+                ${
+                    property.type
+                    ?
+
+                    `<p>
+                        <i class="fas fa-building
+                                  w-5 text-slate-400">
+                        </i>
+                        ${escapeHtml(property.type)}
+                    </p>`
+
+                    : ""
+                }
+
+
+                ${
+                    property.bhk
+                    ?
+
+                    `<p>
+                        <i class="fas fa-bed
+                                  w-5 text-slate-400">
+                        </i>
+                        ${escapeHtml(property.bhk)}
+                    </p>`
+
+                    : ""
+                }
+
+
+                ${
+                    property.area
+                    ?
+
+                    `<p>
+                        <i class="fas fa-location-dot
+                                  w-5 text-slate-400">
+                        </i>
+                        ${escapeHtml(property.area)}
+                    </p>`
+
+                    : ""
+                }
+
+
+                ${
+                    property.price
+                    ?
+
+                    `<p class="font-semibold
+                               text-slate-900">
+
+                        <i class="fas fa-indian-rupee-sign
+                                  w-5 text-slate-400">
+                        </i>
+
+                        ${escapeHtml(property.price)}
+
+                    </p>`
+
+                    : ""
+                }
+
+            </div>
+
+
+            <!-- Owner -->
+
+            <div
+                class="border-t
+                       border-slate-100
+                       pt-4
+                       mb-4">
+
+                <p
+                    class="text-xs
+                           uppercase
+                           tracking-wider
+                           text-slate-400
+                           mb-2">
+
+                    ${
+                        isUser
+                        ? "Submitted By"
+                        : "Managed By"
+                    }
+
+                </p>
+
+
+                <p
+                    class="font-medium
+                           text-slate-800">
+
+                    ${escapeHtml(
+                        property.ownerName
+                        || "Aastha Realty"
+                    )}
+
+                </p>
+
+
+                ${
+                    property.ownerPhone
+                    ?
+
+                    `<a
+                        href="tel:${escapeHtml(property.ownerPhone)}"
+                        class="text-sm text-blue-600
+                               hover:underline">
+
+                        ${escapeHtml(
+                            property.ownerPhone
+                        )}
+
+                    </a>`
+
+                    : ""
+                }
+
+
+                ${
+                    property.ownerEmail
+                    ?
+
+                    `<p
+                        class="text-sm
+                               text-slate-500">
+
+                        ${escapeHtml(
+                            property.ownerEmail
+                        )}
+
+                    </p>`
+
+                    : ""
+                }
+
+            </div>
+
+
+            <!-- Source -->
+
+            <div class="mb-4">
+
+                <span
+                    class="inline-flex
+                           items-center
+                           gap-2
+                           text-xs
+                           px-3 py-1
+                           rounded-full
+                           ${
+                               isUser
+                               ? "bg-blue-50 text-blue-700"
+                               : "bg-yellow-50 text-yellow-700"
+                           }">
+
+                    <i
+                        class="fas ${
+                            isUser
+                            ? "fa-user"
+                            : "fa-building"
+                        }">
+                    </i>
+
+                    ${escapeHtml(
+                        property.source
+                        || "Aastha Realty"
+                    )}
+
+                </span>
+
+
+                ${
+                    String(property.featured)
+                        .toLowerCase()
+                        === "yes"
+
+                    ?
+
+                    `<span
+                        class="inline-flex
+                               items-center
+                               gap-2
+                               text-xs
+                               px-3 py-1
+                               rounded-full
+                               bg-yellow-100
+                               text-yellow-700
+                               ml-1">
+
+                        <i class="fas fa-star"></i>
+                        Featured
+
+                    </span>`
+
+                    : ""
+                }
+
+            </div>
+
+
+            <!-- Actions -->
+
+            <div
+                class="grid grid-cols-2
+                       gap-2">
+
+
+                ${
+                    status === "pending"
+
+                    ?
+
+                    `
+                    <button
+                        onclick="approveProperty('${escapeJs(property.id)}')"
+                        class="px-3 py-2
+                               rounded-lg
+                               bg-green-600
+                               text-white
+                               text-sm
+                               font-medium
+                               hover:bg-green-700">
+
+                        <i class="fas fa-check mr-1"></i>
+                        Approve
+
+                    </button>
+
+
+                    <button
+                        onclick="rejectProperty('${escapeJs(property.id)}')"
+                        class="px-3 py-2
+                               rounded-lg
+                               bg-red-600
+                               text-white
+                               text-sm
+                               font-medium
+                               hover:bg-red-700">
+
+                        <i class="fas fa-xmark mr-1"></i>
+                        Reject
+
+                    </button>
+                    `
+
+                    : ""
+                }
+
+
+                ${
+                    status === "approved"
+
+                    ?
+
+                    `
+                    <button
+                        onclick="toggleFeatured(
+                            '${escapeJs(property.id)}',
+                            '${
+                                String(property.featured)
+                                .toLowerCase() === "yes"
+                                ? "No"
+                                : "Yes"
+                            }'
+                        )"
+                        class="px-3 py-2
+                               rounded-lg
+                               bg-yellow-500
+                               text-white
+                               text-sm
+                               font-medium
+                               hover:bg-yellow-600">
+
+                        <i class="fas fa-star mr-1"></i>
+
+                        ${
+                            String(property.featured)
+                            .toLowerCase() === "yes"
+                            ? "Unfeature"
+                            : "Feature"
+                        }
+
+                    </button>
+                    `
+
+                    : ""
+                }
+
+
+                <button
+                    onclick="deleteProperty('${escapeJs(property.id)}')"
+                    class="px-3 py-2
+                           rounded-lg
+                           bg-slate-100
+                           text-red-600
+                           text-sm
+                           font-medium
+                           hover:bg-red-50">
+
+                    <i class="fas fa-trash mr-1"></i>
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    return card;
+
+}
+
+
+// ==========================================
+// APPROVE
+// ==========================================
+
+async function approveProperty(id) {
+
+    if (
+        !confirm(
+            "Approve this property?"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    await performAction(
+        "approveproperty",
+        id
+    );
+
+}
+
+
+// ==========================================
+// REJECT
+// ==========================================
+
+async function rejectProperty(id) {
+
+    if (
+        !confirm(
+            "Reject this property?"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    await performAction(
+        "rejectproperty",
+        id
+    );
+
+}
+
+
+// ==========================================
+// FEATURE
+// ==========================================
+
+async function toggleFeatured(
+    id,
+    featured
+) {
+
+    await performAction(
+        "featureproperty",
+        id,
+        {
+            featured: featured
+        }
+    );
+
+}
+
+
+// ==========================================
+// DELETE
+// ==========================================
+
+async function deleteProperty(id) {
+
+    if (
+        !confirm(
+            "Delete this property permanently?"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    await performAction(
+        "deleteproperty",
+        id
+    );
+
+}
+
+
+// ==========================================
+// API ACTION
+// ==========================================
+
+async function performAction(
+    type,
+    propertyId,
+    extra = {}
+) {
+
+    try {
+
+        const body =
+            new URLSearchParams({
+
+                type: type,
+
+                propertyId: propertyId,
+
+                ...extra
+
+            });
+
+
+        const response =
+            await fetch(
+                API_URL,
+                {
+                    method: "POST",
+                    body: body
+                }
+            );
+
+
+        const result =
+            await response.json();
+
+
+        if (!result.success) {
+
+            throw new Error(
+                result.message
+                || "Action failed"
+            );
+
+        }
+
+
+        await loadProperties();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            error.message
+            || "Something went wrong."
+        );
+
+    }
+
+}
+
+
+// ==========================================
+// ADD PROPERTY
+// ==========================================
+
+document
+    .getElementById("propertyForm")
+    .addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+
+            const button =
+                document.getElementById(
+                    "submitPropertyButton"
+                );
+
+
+            const message =
+                document.getElementById(
+                    "formMessage"
+                );
+
+
+            button.disabled = true;
+
+            button.innerHTML = `
+                <i class="fas fa-spinner fa-spin mr-2"></i>
+                Adding Property...
+            `;
+
+
+            const formData =
+                new FormData(this);
+
+
+            formData.append(
+                "type",
+                "property"
+            );
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        API_URL,
+                        {
+                            method: "POST",
+                            body: formData
+                        }
+                    );
+
+
+                const result =
+                    await response.json();
+
+
+                if (!result.success) {
+
+                    throw new Error(
+                        result.message
+                        || "Unable to add property"
+                    );
+
+                }
+
+
+                message.className =
+                    "mt-5 p-4 rounded-lg " +
+                    "bg-green-50 " +
+                    "border border-green-200 " +
+                    "text-green-700";
+
+
+                message.textContent =
+                    "Property added successfully.";
+
+
+                message.classList.remove(
+                    "hidden"
+                );
+
+
+                this.reset();
+
+
+                await loadProperties();
+
+
+            } catch (error) {
+
+                console.error(error);
+
+
+                message.className =
+                    "mt-5 p-4 rounded-lg " +
+                    "bg-red-50 " +
+                    "border border-red-200 " +
+                    "text-red-700";
+
+
+                message.textContent =
+                    error.message
+                    || "Something went wrong.";
+
+
+                message.classList.remove(
+                    "hidden"
+                );
+
+            } finally {
+
+                button.disabled = false;
+
+
+                button.innerHTML = `
+                    <i class="fas fa-plus mr-2"></i>
+                    Add Property
+                `;
+
+            }
+
+        }
+    );
+
+
+// ==========================================
+// SEARCH
+// ==========================================
+
+document
+    .getElementById(
+        "searchProperties"
+    )
+    .addEventListener(
+        "input",
+        renderProperties
+    );
+
+
+// ==========================================
+// HTML ESCAPE
+// ==========================================
+
+function escapeHtml(value) {
+
+    return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+// ==========================================
+// JS STRING ESCAPE
+// ==========================================
+
+function escapeJs(value) {
+
+    return String(value || "")
+        .replace(/\\/g, "\\\\")
+        .replace(/'/g, "\\'");
+
+}
+
+
+// ==========================================
+// INITIAL LOAD
+// ==========================================
+
+loadProperties();
+
+
+</script>
+
+
+</body>
+
+</html>
